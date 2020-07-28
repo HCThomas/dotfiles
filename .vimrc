@@ -6,13 +6,4 @@ set incsearch
 set noswapfile
 set number relativenumber
 
-"PlugInstall,PlugUpdate,PlugClean
-call plug#begin('~/.vim/plugged')
-Plug 'morhetz/gruvbox'
-Plug 'Townk/vim-autoclose'
-call plug#end()
-
-colorscheme gruvbox
-hi Normal guibg=NONE ctermbg=NONE
-
 let mapleader = " "
