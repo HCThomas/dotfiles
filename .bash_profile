@@ -1,6 +1,6 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
  
 export PATH=$PATH:~/.scripts
-export EDITOR="vim"
+export EDITOR="code"
 export TERMINAL="konsole"
 export TERMINAL="brave"
