@@ -1,0 +1,22 @@
+# Ignore everything
+*
+
+# Exept these files
+!.config
+!.config/i3
+!.config/i3/*
+!.config/ranger
+!.config/ranger/*
+!.scripts
+!.scripts/*
+!Pictures
+!.Xdefaults
+!.bash_profile
+!.bashrc
+!.gitconfig
+!.gitignore
+!.vimrc
+!.xinitrc
+!'After Arch Install'
+!'Arch Installer'
+!README.md
