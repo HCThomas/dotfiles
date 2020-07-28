@@ -2,6 +2,6 @@
 	email = hthomas1215@gmail.com
 	name = HCThomas
 [credential]
-	helper = cache
+	helper = cache --timeout 30000
 [pull]
 	rebase = false
