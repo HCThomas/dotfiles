@@ -1,5 +1,5 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
  
-export EDITOR="code"
-export TERMINAL="konsole"
+export EDITOR="vim"
+export TERMINAL="urxvt"
 export BROWSER="brave"
