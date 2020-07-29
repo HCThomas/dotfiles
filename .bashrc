@@ -11,6 +11,6 @@ shopt -s autocd
 
 alias ls='ls -ah --color=auto --group-directories-first'
 alias grep='grep --color=auto'
-alias p='sudo pacman'
 alias v='vim'
 alias sv='sudo vim'
+alias p='sudo pacman'
