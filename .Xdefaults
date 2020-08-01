@@ -1,0 +1,33 @@
+!! Appearance
+urxvt.foreground: grey
+urxvt.background: black
+urxvt.transparent: true
+urxvt.shading: 25
+urxvt.scrollBar: false
+urxvt.font: xft:Noto Mono:size=12
+urxvt.boldFont: xft:Noto Mono:size=12
+urxvt.letterSpace: -5
+urxvt.lineSpace: 0
+
+urxvt.urlLauncher: brave
+urxvt.underlineURLs: true
+
+!! gruvbox colors theme
+urxvt.color0: #1d2021
+urxvt.color1: #cc241d
+urxvt.color2: #98971a
+urxvt.color3: #d79921
+urxvt.color4: #458588
+urxvt.color5: #b16286
+urxvt.color6: #689d6a
+urxvt.color7: #a89984
+urxvt.color8: #928374
+urxvt.color9: #fb4934
+urxvt.color10: #b8bb26
+urxvt.color11: #fabd2f
+urxvt.color12: #83a598
+urxvt.color13: #d3869b
+urxvt.color14: #8ec07c
+urxvt.color15: #ebdbb2
+urxvt.color256: #1d2021
+urxvt.color257: #ebdbb2
