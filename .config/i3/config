@@ -6,7 +6,6 @@ font pango:Noto Mono 12
 
 # #---Applications---# #
 exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
-exec --no-startup-id nm-applet
 
 # Volume
 #set $refresh_i3status killall -SIGUSR1 i3status
@@ -84,6 +83,23 @@ bindsym $mod+r+down resize grow height 10 px or 10 ppt
 bindsym $mod+r+up resize shrink height 10 px or 10 ppt
 bindsym $mod+r+Right resize grow width 10 px or 10 ppt
         
+# resize window
+mode "resize" {
+        bindsym j       resize shrink width 10 px or 10 ppt
+        bindsym k       resize grow height 10 px or 10 ppt
+        bindsym l        resize shrink height 10 px or 10 ppt
+        bindsym semicolon      resize grow width 10 px or 10 ppt
+        bindsym Left        resize shrink width 10 px or 10 ppt
+        bindsym Down        resize grow height 10 px or 10 ppt
+        bindsym Up          resize shrink height 10 px or 10 ppt
+        bindsym Right       resize grow width 10 px or 10 ppt
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+        bindsym $mod+r mode "default"
+}
+bindsym $mod+r mode "resize"
+
 # #---Workspaces---# #
 set $ws1 "1"
 set $ws2 "2"
