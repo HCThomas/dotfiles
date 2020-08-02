@@ -6,7 +6,7 @@ urxvt.shading: 20
 urxvt.scrollBar: false
 urxvt.font: xft:Noto Mono:size=12
 urxvt.boldFont: xft:Noto Mono:size=12
-urxvt.letterSpace: -5
+urxvt.letterSpace: -4
 urxvt.lineSpace: 0
 
 !! Extensions
