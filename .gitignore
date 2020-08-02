@@ -1,7 +1,5 @@
-# Ignore everything
 *
 
-# Exept these files
 !.config
 !.config/i3
 !.config/i3/*
@@ -10,8 +8,11 @@
 !.vim
 !.vim/autoload
 !.vim/autoload/*
-!.Xdefaults
 !.bash_profile
 !.bashrc
+!.gitconfig
+!.gitignore
 !.vimrc
+!.Xdefaults
 !.xinitrc
+README.md
