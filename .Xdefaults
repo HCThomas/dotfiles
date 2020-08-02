@@ -2,12 +2,19 @@
 urxvt.foreground: grey
 urxvt.background: black
 urxvt.transparent: true
-urxvt.shading: 25
+urxvt.shading: 20
 urxvt.scrollBar: false
 urxvt.font: xft:Noto Mono:size=12
 urxvt.boldFont: xft:Noto Mono:size=12
 urxvt.letterSpace: -5
 urxvt.lineSpace: 0
+
+!! Extensions
+urxvt.perl-ext-common: default,matcher
+!! matcher
+urxvt.colorUL: red
+urxvt.url-launcher: /usr/bin/xdg-open
+urxvt.matcher.button: 1
 
 !! gruvbox colors theme
 urxvt.color0: #1d2021
