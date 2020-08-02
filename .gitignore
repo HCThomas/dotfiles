@@ -8,6 +8,8 @@
 !.vim
 !.vim/autoload
 !.vim/autoload/*
+!.wallpaper
+!.wallpaper/*
 !.bash_profile
 !.bashrc
 !.gitconfig
@@ -15,4 +17,4 @@
 !.vimrc
 !.Xdefaults
 !.xinitrc
-README.md
+!README.md
