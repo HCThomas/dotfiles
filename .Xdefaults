@@ -9,9 +9,6 @@ urxvt.boldFont: xft:Noto Mono:size=12
 urxvt.letterSpace: -5
 urxvt.lineSpace: 0
 
-urxvt.urlLauncher: brave
-urxvt.underlineURLs: true
-
 !! gruvbox colors theme
 urxvt.color0: #1d2021
 urxvt.color1: #cc241d

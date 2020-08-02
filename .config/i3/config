@@ -5,7 +5,7 @@ default_border pixel 0
 font pango:Noto Mono 12
 
 # #---Applications---# #
-exec feh --bg-scale ~/.wallpaper/wallpaper.png
+exec --no-startup-idfeh --bg-scale ~/.wallpaper/wallpaper.png
 exec --no-startup-id nm-applet
 #exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
