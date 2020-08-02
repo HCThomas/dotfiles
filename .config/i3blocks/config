@@ -1,0 +1,9 @@
+separator_block_width=15
+
+[Volume]
+command=pamixer --get-volume
+interval=10
+
+[clock]
+command=date '+%m/%d/%Y %I:%M%p'
+interval=30

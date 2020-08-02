@@ -5,9 +5,8 @@ default_border pixel 0
 font pango:Noto Mono 12
 
 # #---Applications---# #
-exec --no-startup-idfeh --bg-scale ~/.wallpaper/wallpaper.png
+exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
 exec --no-startup-id nm-applet
-#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # Volume
 #set $refresh_i3status killall -SIGUSR1 i3status
@@ -18,7 +17,8 @@ exec --no-startup-id nm-applet
 
 # i3bar
 bar {
-        status_command i3status
+        status_command i3blocks
+		position top
 }
 
 # #---Bindings---# #
@@ -27,9 +27,10 @@ floating_modifier $mod
 bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 bindsym $mod+d exec dmenu_run
+bindsym $mod+shift+Escape exec "i3-nagbar -t warning -m 'Shutdown computer?' -B 'Yes' 'shutdown now'"
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'"
 
 # change focus
 bindsym $mod+j focus left
@@ -74,22 +75,15 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # resize window
-mode "resize" {
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+bindsym $mod+r+j resize shrink width 10 px or 10 ppt
+bindsym $mod+r+k resize grow height 10 px or 10 ppt
+bindsym $mod+r+l resize shrink height 10 px or 10 ppt
+bindsym $mod+r+semicolon resize grow width 10 px or 10 ppt
+bindsym $mod+r+left resize shrink width 10 px or 10 ppt
+bindsym $mod+r+down resize grow height 10 px or 10 ppt
+bindsym $mod+r+up resize shrink height 10 px or 10 ppt
+bindsym $mod+r+Right resize grow width 10 px or 10 ppt
         
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-bindsym $mod+r mode "resize"
-
 # #---Workspaces---# #
 set $ws1 "1"
 set $ws2 "2"
