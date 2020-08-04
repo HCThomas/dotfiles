@@ -6,6 +6,7 @@ font pango:Noto Mono 10
 
 # #---Applications---# #
 exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
+exec --no-startup-id nm-applet
 
 # Volume
 bindsym F12 exec --no-startup-id pamixer -i 5
