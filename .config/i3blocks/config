@@ -1,5 +1,9 @@
 separator_block_width=15
 
+[Battery]
+command=battery
+interval=5
+
 [Volume]
 command=pamixer --get-volume-human
 interval=1
