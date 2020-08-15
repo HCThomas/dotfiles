@@ -5,6 +5,7 @@ set smartindent
 set incsearch
 set noswapfile
 set number relativenumber
+set mouse=a
 
 "PlugInstall,PlugUpdate,PlugClean
 call plug#begin('~/.vim/plugged')
