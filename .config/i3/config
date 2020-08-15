@@ -26,7 +26,7 @@ bar {
 set $mod Mod4
 floating_modifier $mod
 bindsym $mod+Return exec $TERMINAL
-bindsym $mod+Shift+q kill
+bindsym $mod+c kill
 bindsym $mod+d exec dmenu_run
 bindsym $mod+shift+Escape exec "i3-nagbar -t warning -m 'Shutdown computer?' -B 'Yes' 'shutdown now'"
 bindsym $mod+Shift+c reload
@@ -34,27 +34,27 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'"
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split orientation
-bindsym $mod+h split h
+bindsym $mod+Shift+v split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
@@ -73,24 +73,14 @@ bindsym $mod+space focus mode_toggle
 
 # focus the parent/child container
 bindsym $mod+a focus parent
-#bindsym $mod+d focus child
+bindsym $mod+Shift+a focus child
 
 # resize window
-bindsym $mod+r+j resize shrink width 10 px or 10 ppt
-bindsym $mod+r+k resize grow height 10 px or 10 ppt
-bindsym $mod+r+l resize shrink height 10 px or 10 ppt
-bindsym $mod+r+semicolon resize grow width 10 px or 10 ppt
-bindsym $mod+r+left resize shrink width 10 px or 10 ppt
-bindsym $mod+r+down resize grow height 10 px or 10 ppt
-bindsym $mod+r+up resize shrink height 10 px or 10 ppt
-bindsym $mod+r+Right resize grow width 10 px or 10 ppt
-        
-# resize window
 mode "resize" {
-        bindsym j       resize shrink width 10 px or 10 ppt
-        bindsym k       resize grow height 10 px or 10 ppt
-        bindsym l        resize shrink height 10 px or 10 ppt
-        bindsym semicolon      resize grow width 10 px or 10 ppt
+        bindsym h       resize shrink width 10 px or 10 ppt
+        bindsym j       resize grow height 10 px or 10 ppt
+        bindsym k       resize shrink height 10 px or 10 ppt
+        bindsym l       resize grow width 10 px or 10 ppt
         bindsym Left        resize shrink width 10 px or 10 ppt
         bindsym Down        resize grow height 10 px or 10 ppt
         bindsym Up          resize shrink height 10 px or 10 ppt
