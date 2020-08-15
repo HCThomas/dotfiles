@@ -2,7 +2,7 @@
 gaps inner 5
 gaps outer 5
 default_border pixel 0
-font pango:Noto Mono 10
+font pango:Noto Sans 10
 
 # #---Applications---# #
 exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
