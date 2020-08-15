@@ -1,7 +1,7 @@
 export PATH="$PATH:$HOME/.scripts"
 export EDITOR="vim"
 export TERMINAL="urxvt"
-export BROWSER="google-chrome"
+export BROWSER="google-chrome-stable"
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 

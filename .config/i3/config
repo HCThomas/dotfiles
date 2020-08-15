@@ -26,6 +26,8 @@ bar {
 set $mod Mod4
 floating_modifier $mod
 bindsym $mod+Return exec $TERMINAL
+bindsym $mod+b exec $BROWSER
+bindsym $mod+p exec rangerURXVT
 bindsym $mod+c kill
 bindsym $mod+d exec dmenu_run
 bindsym $mod+shift+Escape exec "i3-nagbar -t warning -m 'Shutdown computer?' -B 'Yes' 'shutdown now'"
