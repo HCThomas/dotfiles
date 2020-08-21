@@ -1,36 +1,53 @@
+!! Colorscheme
+
+! special
+*.foreground:   #c5c8c6
+*.background:   [90]#1d1f21
+*.cursorColor:  #c5c8c6
+
+! black
+*.color0:       #282a2e
+*.color8:       #373b41
+
+! red
+*.color1:       #a54242
+*.color9:       #cc6666
+
+! green
+*.color2:       #8c9440
+*.color10:      #b5bd68
+
+! yellow
+*.color3:       #de935f
+*.color11:      #f0c674
+
+! blue
+*.color4:       #5f819d
+*.color12:      #81a2be
+
+! magenta
+*.color5:       #85678f
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #5e8d87
+*.color14:      #8abeb7
+
+! white
+*.color7:       #707880
+*.color15:      #c5c8c6
+
 !! Appearance
-urxvt.foreground: grey
-urxvt.background: [80]#000000
 urxvt.depth: 32
 urxvt.scrollBar: false
 urxvt.font: xft:Noto Sans:size=10
 urxvt.boldFont: xft:Noto Sans:size=10
 urxvt.letterSpace: -3
-urxvt.lineSpace: 0
 
 !! Extensions
 urxvt.perl-ext-common: default,matcher
 !! matcher
-urxvt.colorUL: red
+urxvt.colorUL: #707880
 urxvt.url-launcher: /usr/bin/xdg-open
 urxvt.matcher.button: 1
 
-!! gruvbox colors theme
-urxvt.color0: #1d2021
-urxvt.color1: #cc241d
-urxvt.color2: #98971a
-urxvt.color3: #d79921
-urxvt.color4: #458588
-urxvt.color5: #b16286
-urxvt.color6: #689d6a
-urxvt.color7: #a89984
-urxvt.color8: #928374
-urxvt.color9: #fb4934
-urxvt.color10: #b8bb26
-urxvt.color11: #fabd2f
-urxvt.color12: #83a598
-urxvt.color13: #d3869b
-urxvt.color14: #8ec07c
-urxvt.color15: #ebdbb2
-urxvt.color256: #1d2021
-urxvt.color257: #ebdbb2

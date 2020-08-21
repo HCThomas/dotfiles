@@ -4,6 +4,19 @@ gaps outer 5
 default_border pixel 0
 font pango:Noto Sans 10
 
+set $bg-color				#1d1f21
+set $inactive-bg-color 		#2f343f
+set $urgent-bg-color 		#E53935
+set $text-color 			#f3f4f5
+set $inactive-text-color	#676E7D
+set $indicator				#00ff00
+set $separator				#757575
+# class                 border				background 			text    				indicator	child_border
+client.focused			$bg-color			$bg-color			$text-color				$indicator	$bg-color
+client.focused_inactive	$inactive-bg-color	$inactive-bg-color	$inactive-text-color	$indicator	$inactive-bg-color
+client.unfocused		$inactive-bg-color	$inactive-bg-color	$inactive-text-color	$indicator	$inactive-bg-color
+client.urgent			$urgent-bg-color	$urgent-bg-color	$text-color				$indicator	$urgent-bg-color
+
 # #---Applications---# #
 exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
 exec --no-startup-id nm-applet
@@ -12,7 +25,7 @@ exec --no-startup-id picom -b
 # Volume
 bindsym F12 exec --no-startup-id pamixer -i 5
 bindsym F11 exec --no-startup-id pamixer -d 5
-bindsym F9 exec --no-startup-id pamixer -t
+bindsym F8 exec --no-startup-id pamixer -t
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
 bindsym XF86AudioMute exec --no-startup-id pamixer -t
@@ -21,6 +34,14 @@ bindsym XF86AudioMute exec --no-startup-id pamixer -t
 bar {
         status_command i3blocks
 		position top
+		colors {
+				background $bg-color
+				separator $separator
+				# class				border				background			text
+				focused_workspace	$bg-color			$bg-color			$text-color
+				inactive_workspace	$inactive-bg-color	$inactive-bg-color	$incative-gb-color
+				urgent_workspace	$urgent-bg-color	$urgent-bg-color	$urgent-bg-color
+		}
 }
 
 # #---Bindings---# #
@@ -30,7 +51,7 @@ bindsym $mod+Return exec $TERMINAL
 bindsym $mod+b exec $BROWSER
 bindsym $mod+p exec rangerURXVT
 bindsym $mod+c kill
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -nb black -sb red -fn "Noto Mono"
 bindsym $mod+shift+Escape exec "i3-nagbar -t warning -m 'Shutdown computer?' -B 'Yes' 'shutdown now'"
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
