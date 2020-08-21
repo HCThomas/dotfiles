@@ -11,6 +11,8 @@ set $text-color 			#f3f4f5
 set $inactive-text-color	#676E7D
 set $indicator				#00ff00
 set $separator				#757575
+set $lock					1d1f21
+
 # class                 border				background 			text    				indicator	child_border
 client.focused			$bg-color			$bg-color			$text-color				$indicator	$bg-color
 client.focused_inactive	$inactive-bg-color	$inactive-bg-color	$inactive-text-color	$indicator	$inactive-bg-color
@@ -29,6 +31,10 @@ bindsym F8 exec --no-startup-id pamixer -t
 bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
 bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
 bindsym XF86AudioMute exec --no-startup-id pamixer -t
+
+# Brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +50
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 50-
 
 # i3bar
 bar {
@@ -51,6 +57,7 @@ bindsym $mod+Return exec $TERMINAL
 bindsym $mod+b exec $BROWSER
 bindsym $mod+p exec rangerURXVT
 bindsym $mod+c kill
+bindsym $mod+shift+q exec i3lock -c $lock
 bindsym $mod+d exec dmenu_run -nb black -sb red -fn "Noto Mono"
 bindsym $mod+shift+Escape exec "i3-nagbar -t warning -m 'Shutdown computer?' -B 'Yes' 'shutdown now'"
 bindsym $mod+Shift+c reload
