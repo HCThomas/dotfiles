@@ -5,7 +5,7 @@ command=battery
 interval=5
 
 [Volume]
-command=pamixer --get-volume-human
+command=volume
 interval=1
 
 [clock]
