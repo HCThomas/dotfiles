@@ -1,10 +1,12 @@
 separator_block_width=15
 
 [Battery]
+label=🔋
 command=battery
 interval=5
 
 [Volume]
+label=🔊
 command=volume
 interval=1
 

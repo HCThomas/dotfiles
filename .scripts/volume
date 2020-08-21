@@ -1,4 +1,4 @@
 #!/bin/bash
 
 volume=$(pamixer --get-volume-human)
-echo -e "🔊 ${volume}"
+echo -e " ${volume}"

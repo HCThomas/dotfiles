@@ -3,5 +3,5 @@
 FILE=/sys/class/power_supply/BAT0/capacity
 if [ -f "$FILE" ]; then
 	battery=$(cat /sys/class/power_supply/BAT0/capacity)
-	echo " 🔋 ${battery}%"
+	echo "${battery}%"
 fi
