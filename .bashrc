@@ -1,6 +1,6 @@
 [[ $- != *i* ]] && return
 
-PS1='\e[1;32m\W$\e[m'
+PS1='\e[1;32m\W$ \e[m'
 
 HISTSIZE=1000
 HISTFILESIZE=2000

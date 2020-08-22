@@ -20,17 +20,17 @@ client.unfocused		$inactive-bg-color	$inactive-bg-color	$inactive-text-color	$in
 client.urgent			$urgent-bg-color	$urgent-bg-color	$text-color				$indicator	$urgent-bg-color
 
 # #---Applications---# #
-exec --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
+exec_always --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
 exec --no-startup-id nm-applet
 exec --no-startup-id picom -b
 
 # Volume
-bindsym F12 exec --no-startup-id pamixer -i 5
-bindsym F11 exec --no-startup-id pamixer -d 5
-bindsym F8 exec --no-startup-id pamixer -t
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5
-bindsym XF86AudioMute exec --no-startup-id pamixer -t
+bindsym $mod+F12 exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks
+bindsym $mod+F11 exec --no-startup-id pamixer -d 5 && pkill -RTMIN+1 i3blocks
+bindsym $mod+F10 exec --no-startup-id pamixer -t && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -RTMIN+1 i3blocks
 
 # Brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +50
