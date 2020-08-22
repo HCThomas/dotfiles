@@ -2,7 +2,7 @@
 gaps inner 2
 gaps outer 2
 default_border pixel 0
-font pango:Noto Sans 10
+font pango:Noto Mono 9
 
 set $bg-color				#1d1f21
 set $inactive-bg-color 		#2f343f
