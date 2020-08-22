@@ -1,10 +1,5 @@
 separator_block_width=15
 
-[Battery]
-label=🔋
-command=battery
-interval=5
-
 [battery2]
 command=battery2
 markup=pango
@@ -18,4 +13,4 @@ USE_ALSA_NAME=1
 
 [clock]
 command=date '+%m/%d/%Y %I:%M%p'
-interval=30
+interval=1
