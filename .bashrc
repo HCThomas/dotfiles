@@ -1,6 +1,6 @@
 [[ $- != *i* ]] && return
 
-PS1='\[$(tput bold)\]\[$(tput setaf 0)\]\u@\h \W->\[$(tput sgr0)\]'
+PS1='\e[1;32m\W$\e[m'
 
 HISTSIZE=1000
 HISTFILESIZE=2000
@@ -9,7 +9,8 @@ HISTFILESIZE=2000
 #cd without typing cd
 shopt -s autocd
 
-alias ls='ls -ah --color=auto --group-directories-first'
+alias ls='ls -h --color=auto --group-directories-first'
+alias la='ls -A'
 alias grep='grep --color=auto'
 
 alias v='vim'
