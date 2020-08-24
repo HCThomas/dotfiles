@@ -46,7 +46,7 @@ bar {
 				# class				border				background			text
 				focused_workspace	$bg-color			$bg-color			$text-color
 				inactive_workspace	$inactive-bg-color	$inactive-bg-color	$incative-gb-color
-				urgent_workspace	$urgent-bg-color	$urgent-bg-color	$urgent-bg-color
+				urgent_workspace	$urgent-bg-color	$urgent-bg-color	$text-color
 		}
 }
 
@@ -57,12 +57,7 @@ bindsym $mod+Return exec $TERMINAL
 bindsym $mod+b exec $BROWSER
 bindsym $mod+p exec rangerURXVT
 bindsym $mod+c kill
-bindsym $mod+shift+q exec i3lock -c $lock
 bindsym $mod+d exec dmenu_run -nb black -sb red -fn "Noto Mono"
-bindsym $mod+shift+Escape exec "i3-nagbar -t warning -m 'Shutdown computer?' -B 'Yes' 'shutdown now'"
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'"
 
 # change focus
 bindsym $mod+h focus left
@@ -91,11 +86,6 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change container layout
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
@@ -122,6 +112,46 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# resize gaps
+mode "gaps" {
+		bindsym plus gaps inner current plus 2, gaps outer current plus 2
+		bindsym minus gaps inner current minus 2, gaps outer current minus 2
+		bindsym 0 gaps inner current set 0, gaps outer current set 0
+		bindsym r gaps inner current set 2, gaps outer current set 2
+
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
+		bindsym $mod+g mode "default"
+}
+bindsym $mod+g mode "gaps"
+
+# change container layout
+mode "$layout" {
+		bindsym s layout stacking, mode "default"
+		bindsym t layout tabbed, mode "default"
+		bindsym e layout toggled split, mode "default"
+
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
+		bindsym $mod+z mode "default"
+}
+bindsym $mod+z mode "$layout"
+set $layout (s)tacking, (t)abbed, (e)toggled split
+
+# system commands
+mode "$system" {
+		bindsym e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'", mode "default"
+		bindsym r reload, mode "default"
+		bindsym c restart, mode "default"
+		bindsym l exec i3lock -c $lock, mode "default"
+		bindsym s exec "i3-nagbar -t warning -m 'Shutdown computer?' -B 'Yes' 'shutdown now'", mode "default"
+
+		bindsym Retrun mode "default"
+		bindsym Escape mode "default"
+}
+bindsym $mod+Escape mode "$system"
+set $system (e)xit, (r)eload, (c)restart, (l)ock, (s)hutdwon
 
 # #---Workspaces---# #
 set $ws1 "1"
