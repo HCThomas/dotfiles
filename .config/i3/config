@@ -11,7 +11,7 @@ set $text-color 			#f3f4f5
 set $inactive-text-color	#676E7D
 set $indicator				#00ff00
 set $separator				#757575
-set $lock					1d1f21
+set $locker i3lock -c 1d1f21
 
 # class                 border				background 			text    				indicator	child_border
 client.focused			$bg-color			$bg-color			$text-color				$indicator	$bg-color
@@ -23,6 +23,7 @@ client.urgent			$urgent-bg-color	$urgent-bg-color	$text-color				$indicator	$urg
 exec_always --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
 exec --no-startup-id nm-applet
 exec --no-startup-id picom -b
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 1d1f21 --nofork
 
 # Volume
 bindsym $mod+F12 exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks
@@ -141,17 +142,19 @@ set $layout (s)tacking, (t)abbed, (e)toggled split
 
 # system commands
 mode "$system" {
+		bindsym 1 reload, mode "default"
+		bindsym 2 restart, mode "default"
+		bindsym l exec $locker, mode "default"
 		bindsym e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'", mode "default"
-		bindsym r reload, mode "default"
-		bindsym c restart, mode "default"
-		bindsym l exec i3lock -c $lock, mode "default"
-		bindsym s exec "i3-nagbar -t warning -m 'Shutdown computer?' -B 'Yes' 'shutdown now'", mode "default"
+		bindsym s exec systemctl suspend, mode "default"
+		bindsym r exec "i3-nagbar -t warning -m 'Reboot computer?' -B 'Yes' 'reboot'", mode "default"
+		bindsym Shift+s exec "i3-nagbar -t warning -m 'Shutdown computer?' -B 'Yes' 'shutdown now'", mode "default"
 
 		bindsym Retrun mode "default"
 		bindsym Escape mode "default"
 }
 bindsym $mod+Escape mode "$system"
-set $system (e)xit, (r)eload, (c)restart, (l)ock, (s)hutdwon
+set $system (1)eload, (2)restart, (l)ock, (e)xit, (s)uspend, (r)eboot, (s)hutdwon
 
 # #---Workspaces---# #
 set $ws1 "1"
