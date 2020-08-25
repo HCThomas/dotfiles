@@ -56,7 +56,7 @@ set $mod Mod4
 floating_modifier $mod
 bindsym $mod+Return exec $TERMINAL
 bindsym $mod+b exec $BROWSER
-bindsym $mod+p exec rangerURXVT
+bindsym $mod+p exec rangerTermite
 bindsym $mod+c kill
 bindsym $mod+d exec dmenu_run -nb black -sb red -fn "Noto Mono"
 

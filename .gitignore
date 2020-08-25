@@ -9,6 +9,8 @@
 !.config/picom/*
 !.config/ranger
 !.config/ranger/*
+!.config/termite
+!.config/termite/*
 !.scripts
 !.scripts/*
 !.vim
