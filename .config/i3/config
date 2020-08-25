@@ -154,7 +154,7 @@ mode "$system" {
 		bindsym Escape mode "default"
 }
 bindsym $mod+Escape mode "$system"
-set $system (1)eload, (2)restart, (l)ock, (e)xit, (s)uspend, (r)eboot, (s)hutdwon
+set $system (1)eload, (2)restart, (l)ock, (e)xit, (s)uspend, (r)eboot, (s)uspend, (shift+s)hutdown
 
 # #---Workspaces---# #
 set $ws1 "1"
