@@ -1,9 +1,12 @@
-# #---Appearance---# #
+## Appearance
+
+# Options
 gaps inner 2
 gaps outer 2
 default_border pixel 0
 font pango:Noto Mono 9
 
+# Variables
 set $bg-color				#1d1f21
 set $inactive-bg-color 		#2f343f
 set $urgent-bg-color 		#E53935
@@ -19,24 +22,6 @@ client.focused_inactive	$inactive-bg-color	$inactive-bg-color	$inactive-text-col
 client.unfocused		$inactive-bg-color	$inactive-bg-color	$inactive-text-color	$indicator	$inactive-bg-color
 client.urgent			$urgent-bg-color	$urgent-bg-color	$text-color				$indicator	$urgent-bg-color
 
-# #---Applications---# #
-exec_always --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
-exec --no-startup-id nm-applet
-exec --no-startup-id picom -b
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 1d1f21 --nofork
-
-# Volume
-bindsym $mod+F12 exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks
-bindsym $mod+F11 exec --no-startup-id pamixer -d 5 && pkill -RTMIN+1 i3blocks
-bindsym $mod+F10 exec --no-startup-id pamixer -t && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -RTMIN+1 i3blocks
-
-# Brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +50
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 50-
-
 # i3bar
 bar {
         status_command i3blocks
@@ -51,7 +36,13 @@ bar {
 		}
 }
 
-# #---Bindings---# #
+## Applications
+exec_always --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
+exec --no-startup-id nm-applet
+exec --no-startup-id picom -b
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 1d1f21 --nofork
+
+## Bindings
 set $mod Mod4
 floating_modifier $mod
 bindsym $mod+Return exec $TERMINAL
@@ -59,6 +50,19 @@ bindsym $mod+b exec $BROWSER
 bindsym $mod+p exec rangerTermite
 bindsym $mod+c kill
 bindsym $mod+d exec dmenu_run -nb black -sb red -fn "Noto Mono"
+
+# Volume
+bindsym $mod+F12 exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks
+bindsym $mod+F11 exec --no-startup-id pamixer -d 5 && pkill -RTMIN+1 i3blocks
+bindsym $mod+F10 exec --no-startup-id pamixer -t && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id pamixer -d 5 && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pamixer -t && pkill -RTMIN+1 i3blocks
+
+# Brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +50
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 50-
+
 
 # change focus
 bindsym $mod+h focus left
@@ -156,7 +160,7 @@ mode "$system" {
 bindsym $mod+Escape mode "$system"
 set $system (1)eload, (2)restart, (l)ock, (e)xit, (s)uspend, (r)eboot, (s)uspend, (shift+s)hutdown
 
-# #---Workspaces---# #
+## Workspaces
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
