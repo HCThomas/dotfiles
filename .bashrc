@@ -5,28 +5,37 @@ PS1='\e[1;32m\W$ \e[m'
 HISTSIZE=1000
 HISTFILESIZE=2000
 
-
-#cd without typing cd
+# cd without typing cd
 shopt -s autocd
 
+## Aliases
+# ls
 alias ls='ls -h --color=auto --group-directories-first'
 alias la='ls -A'
+
+# Grep
 alias grep='grep --color=auto'
 
+# Pacman
+alias p='sudo pacman'
+alias pu='sudo pacman -Syu'
+alias ps='sudo pacman -S'
+alias pss='sudo pacman -Ss'
+
+# Yay
+alias yu='yay -Syu'
+alias ys='yay -S'
+alias yss='yay -Ss'
+
+# Git
+alias ga='git add .'
+alias gc='git commit -m'
+alias gp='git push'
+alias gu='git pull'
+
+# Vim
 alias v='vim'
 alias sv='sudo vim'
 
-alias p='sudo pacman'
-alias psyu='sudo pacman -Syu'
-alias ps='sudo pacman -S'
-
-alias ysyu='yay -Syu'
-alias ys='yay -S'
-
-alias s='sudo systemctl'
-
+# Ranger
 alias r='ranger'
-
-alias gc='git add . && git commit -m'
-alias gp='git push'
-alias gpull='git pull'
