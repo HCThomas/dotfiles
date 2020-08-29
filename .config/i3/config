@@ -4,7 +4,7 @@
 gaps inner 2
 gaps outer 2
 default_border pixel 0
-font pango:Noto Mono 9
+font pango:Monospace 9
 
 # Variables
 set $bg-color				#1d1f21
@@ -37,7 +37,7 @@ bar {
 }
 
 ## Applications
-exec_always --no-startup-id feh --bg-scale ~/.wallpaper/wallpaper.png
+exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper/wallpaper.png
 exec --no-startup-id nm-applet
 exec --no-startup-id picom -b
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 1d1f21 --nofork
