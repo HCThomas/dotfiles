@@ -1,27 +1,51 @@
+## ignore everything
 *
 
+## exept these files
 !.config
+
+# Wallpaper
+!.config/wallpaper
+!.config/wallpaper/wallpaper.png
+
+# i3
 !.config/i3
 !.config/i3/*
+
+# i3blocks
 !.config/i3blocks
 !.config/i3blocks/*
+
+# Picom
 !.config/picom
 !.config/picom/*
+
+# Ranger
 !.config/ranger
 !.config/ranger/*
+
+# Termite
 !.config/termite
 !.config/termite/*
+
+# Scripts
 !.scripts
 !.scripts/*
+
+# Vim
 !.vim
 !.vim/autoload
 !.vim/autoload/*
-!.wallpaper
-!.wallpaper/*
+!.vimrc
+
+# Bash
 !.bash_profile
 !.bashrc
+
+# Xinit
+!.xinitrc
+
+# Git
 !.gitconfig
 !.gitignore
-!.vimrc
-!.xinitrc
 !README.md
