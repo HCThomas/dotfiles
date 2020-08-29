@@ -39,3 +39,6 @@ alias sv='sudo vim'
 
 # Ranger
 alias r='ranger'
+
+# Load Xresource
+alias xr='xrdb ~/.Xresources'

@@ -49,7 +49,7 @@ bindsym $mod+Return exec $TERMINAL
 bindsym $mod+b exec $BROWSER
 bindsym $mod+p exec rangerTermite
 bindsym $mod+c kill
-bindsym $mod+d exec dmenu_run -nb black -sb red -fn "Noto Mono"
+bindsym $mod+d exec dmenu_run
 
 # Volume
 bindsym $mod+F12 exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks

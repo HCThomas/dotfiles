@@ -6,7 +6,7 @@ set incsearch
 set ignorecase
 set smartcase
 set noswapfile
-set relativenumber
+set number relativenumber
 set mouse=a
 set bg=dark
 

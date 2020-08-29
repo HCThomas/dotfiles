@@ -46,6 +46,9 @@
 # Xinit
 !.xinitrc
 
+# Xresources
+!.Xresources
+
 # Git
 !.gitconfig
 !.gitignore
