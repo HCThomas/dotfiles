@@ -3,7 +3,7 @@
 # Options
 gaps inner 2
 gaps outer 2
-default_border pixel 0
+default_border pixel 1
 font pango:Monospace 9
 
 # Variables
@@ -39,7 +39,7 @@ bar {
 ## Applications
 exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper/wallpaper.png
 exec --no-startup-id nm-applet
-exec --no-startup-id picom -b
+exec --no-startup-id picom -f
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 1d1f21 --nofork
 
 ## Bindings
