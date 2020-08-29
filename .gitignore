@@ -39,6 +39,10 @@
 !.vim/autoload/*
 !.vimrc
 
+# dwm
+!dwm
+!dwm/*
+
 # Bash
 !.bash_profile
 !.bashrc
