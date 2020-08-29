@@ -43,6 +43,10 @@
 !dwm
 !dwm/*
 
+# st
+!st
+!st/*
+
 # Bash
 !.bash_profile
 !.bashrc

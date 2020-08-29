@@ -32,4 +32,5 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-exec i3
+#exec i3
+picom -f & feh --bg-scale ~/.config/wallpaper/wallpaper.png & while true; do dwm >/dev/null 2>&1; done; exec dwm

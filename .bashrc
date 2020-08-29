@@ -42,3 +42,6 @@ alias r='ranger'
 
 # Load Xresource
 alias xr='xrdb ~/.Xresources'
+
+# Recompile dwm
+alias mdwm='cd ~/dwm && cp config.def.h config.h && make && sudo make clean install'
