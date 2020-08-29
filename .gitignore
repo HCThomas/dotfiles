@@ -17,7 +17,6 @@
 !.config/i3blocks/*
 
 # Picom
-.config/picom/picom.conf
 !.config/picom
 !.config/picom/picom.conf.v
 !.config/picom/picom.conf.c
