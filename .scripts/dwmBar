@@ -10,8 +10,8 @@ vol(){
 }
 
 bat(){
-		FILE=/sys/class/power_suply/BAT
-		if [ -f "$FILE" ]; then
+		FILE=/sys/class/power_supply/BAT0
+		if [ -e "$FILE" ]; then
 				bat="$(cat $FILE/capacity)%"
 				echo -e " ${bat} |"
 		fi

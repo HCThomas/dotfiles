@@ -1,0 +1,9 @@
+#!/bin/bash
+
+FILE=/sys/class/power_supply/BAT0
+if [ -e "$FILE" ]; then
+		bat="$(cat $FILE/capacity)%"
+		echo -e "  ${bat} |"
+else
+		echo -e "none"
+fi
