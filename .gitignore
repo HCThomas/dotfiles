@@ -46,6 +46,8 @@
 # dwm bar
 !dwm-bar
 !dwm-bar/*
+!dwm-bar/bar-functions
+!dwm-bar/bar-functions/*
 
 # st
 !st
