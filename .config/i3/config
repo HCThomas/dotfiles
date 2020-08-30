@@ -3,7 +3,7 @@
 # Options
 gaps inner 2
 gaps outer 2
-default_border pixel 1
+default_border pixel 2
 font pango:Noto Mono 9
 
 # Variables
@@ -14,10 +14,11 @@ set $text-color 			#f3f4f5
 set $inactive-text-color	#676E7D
 set $indicator				#000000
 set $separator				#757575
+set $focused-border			#C70039
 set $locker i3lock -c 1d1f21
 
 # class                 border				background 			text    				indicator	child_border
-client.focused			$bg-color			$bg-color			$text-color				$indicator	$bg-color
+client.focused			$bg-color			$bg-color			$text-color				$indicator	$focused-border
 client.focused_inactive	$inactive-bg-color	$inactive-bg-color	$inactive-text-color	$indicator	$inactive-bg-color
 client.unfocused		$inactive-bg-color	$inactive-bg-color	$inactive-text-color	$indicator	$inactive-bg-color
 client.urgent			$urgent-bg-color	$urgent-bg-color	$text-color				$indicator	$urgent-bg-color
@@ -48,7 +49,7 @@ floating_modifier $mod
 bindsym $mod+Return exec $TERMINAL
 bindsym $mod+b exec $BROWSER
 bindsym $mod+p exec rangerTermite
-bindsym $mod+c kill
+bindsym $mod+shift+c kill
 bindsym $mod+d exec dmenu_run
 
 # Volume
@@ -154,7 +155,7 @@ mode "$system" {
 		bindsym r exec "i3-nagbar -t warning -m 'Reboot computer?' -B 'Yes' 'reboot'", mode "default"
 		bindsym Shift+s exec "i3-nagbar -t warning -m 'Shutdown computer?' -B 'Yes' 'shutdown now'", mode "default"
 
-		bindsym Retrun mode "default"
+		bindsym Return mode "default"
 		bindsym Escape mode "default"
 }
 bindsym $mod+Escape mode "$system"
