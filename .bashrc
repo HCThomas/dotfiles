@@ -44,5 +44,5 @@ alias r='ranger'
 alias xr='xrdb ~/.Xresources'
 
 # Recompile dwm
-alias mdwm='cd ~/.config/dwm && cp config.def.h config.h && sudo make clean install'
-alias mst='cd ~/.config/st && cp config.def.h config.h && sudo make clean install'
+alias mdwm='cd ~/.config/dwm && sudo make clean install'
+alias mst='cd ~/.config/st && sudo make clean install'
