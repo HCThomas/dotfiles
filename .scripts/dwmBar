@@ -1,0 +1,24 @@
+#!/bin/bash
+dt(){
+		dt="$(date '+%m/%d/%Y %I:%M%p')"
+		echo -e " $dt"
+}
+
+vol(){
+		vol="$(pamixer --get-volume-human)"
+		echo -e " $vol"
+}
+
+bat(){
+		FILE=/sys/class/power_suply/BAT
+		if [ -f "$FILE" ]; then
+				bat="$(cat $FILE/capacity)%"
+				echo -e " ${bat} |"
+		fi
+}
+
+while true; do
+		xsetroot -name "$(bat) $(vol) | $(dt)"
+		sleep 1s
+done
+

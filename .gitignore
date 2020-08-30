@@ -43,12 +43,6 @@
 !/.config/dwm
 !/.config/dwm/*
 
-# dwm bar
-!/.config/dwm-bar
-!/.config/dwm-bar/*
-!/.config/dwm-bar/bar-functions
-!/.config/dwm-bar/bar-functions/*
-
 # st
 !/.config/st
 !/.config/st/*
