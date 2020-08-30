@@ -40,18 +40,18 @@
 !.vimrc
 
 # dwm
-!dwm
-!dwm/*
+!/.config/dwm
+!/.config/dwm/*
 
 # dwm bar
-!dwm-bar
-!dwm-bar/*
-!dwm-bar/bar-functions
-!dwm-bar/bar-functions/*
+!/.config/dwm-bar
+!/.config/dwm-bar/*
+!/.config/dwm-bar/bar-functions
+!/.config/dwm-bar/bar-functions/*
 
 # st
-!st
-!st/*
+!/.config/st
+!/.config/st/*
 
 # Bash
 !.bash_profile
