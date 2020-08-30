@@ -4,7 +4,7 @@
 gaps inner 2
 gaps outer 2
 default_border pixel 1
-font pango:Monospace 9
+font pango:Noto Mono 9
 
 # Variables
 set $bg-color				#1d1f21
@@ -12,7 +12,7 @@ set $inactive-bg-color 		#2f343f
 set $urgent-bg-color 		#E53935
 set $text-color 			#f3f4f5
 set $inactive-text-color	#676E7D
-set $indicator				#00ff00
+set $indicator				#000000
 set $separator				#757575
 set $locker i3lock -c 1d1f21
 

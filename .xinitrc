@@ -32,5 +32,16 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-#exec i3
-picom -f & feh --bg-scale ~/.config/wallpaper/wallpaper.png & ~/dwm-bar/dwm_bar.sh & while true; do dwm >/dev/null 2>&1; done; exec dwm
+session=${2:-i3}
+
+case $session in
+    i3) exec i3;;
+    dwm) picom -f &
+			feh --bg-scale ~/.config/wallpaper/wallpaper.png &
+			~/dwm-bar/dwm_bar.sh &
+			while true; do dwm >/dev/null 2>&1; done
+			exec dwm;;
+    # No known session, try to run it as command
+    *) exec $1;;
+esac
+
