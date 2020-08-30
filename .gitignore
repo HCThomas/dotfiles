@@ -43,6 +43,10 @@
 !dwm
 !dwm/*
 
+# dwm bar
+!dwm-bar
+!dwm-bar/*
+
 # st
 !st
 !st/*
