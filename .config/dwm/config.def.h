@@ -64,6 +64,8 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *upvol[]   = { "pamixer", "-i", "5", NULL };
 static const char *downvol[] = { "pamixer", "-d", "5", NULL };
 static const char *mutevol[] = { "pamixer", "-t", NULL };
+static const char *upbri[] = { "brightnessctl", "s", "+50", NULL };
+static const char *downbri[] = { "brightnessctl", "s", "50-", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -73,6 +75,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_F12, spawn, {.v = upvol   } },
 	{ MODKEY,                       XK_F11, spawn, {.v = downvol } },
 	{ MODKEY,                       XK_F10,  spawn, {.v = mutevol } },
+	{ 0,                       XF86XK_MonBrightnessUp,  spawn, {.v = upbri } },
+	{ 0,                       XF86XK_MonBrightnessDown,  spawn, {.v = downbri } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
