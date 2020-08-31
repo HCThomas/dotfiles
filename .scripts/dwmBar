@@ -32,6 +32,6 @@ wifi(){
 
 while true; do
 		xsetroot -name "$(bat) $(wifi) | $(vol) | $(dt)"
-		sleep 1s
+		sleep 10s
 done
 
