@@ -37,13 +37,6 @@
 *.color7: #707880
 *.color15: #c5c8c6
 
-*normbgcolor: #1d1f21
-*normbordercolor: #373b41
-*normfgcolor: #c5c8c6
-*selbgcolor: #85678f
-*selbordercolor: #85678f
-*selfgcolor: #c5c8c6
-
 !! Appearance
 URxvt.background: [90]#1d1f21
 URxvt.depth: 32
