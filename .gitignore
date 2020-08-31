@@ -1,6 +1,10 @@
 ## ignore everything
 *
 
+# Test DWM
+!dwm/
+!dwm/*
+
 ## exept these files
 !.config
 
