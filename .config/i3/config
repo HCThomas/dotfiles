@@ -38,7 +38,7 @@ bar {
 }
 
 ## Applications
-exec_always --no-startup-id feh --bg-scale ~/.config/wallpaper/wallpaper.png
+exec_always --no-startup-id feh --bg-scale ~/.config/wp.png
 exec --no-startup-id nm-applet
 exec --no-startup-id picom -f
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 1d1f21 --nofork

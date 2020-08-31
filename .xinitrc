@@ -37,7 +37,7 @@ session=${2:-i3}
 case $session in
     i3) exec i3;;
     dwm) picom -f &
-			feh --bg-scale ~/.config/wallpaper/wallpaper.png &
+			feh --bg-scale ~/.config/wp.png &
 			#~/.config/dwm-bar/dwm_bar.sh &
 			#while true; do dwm >/dev/null 2>&1; done
 			dwmBar &
