@@ -43,8 +43,8 @@
 !.vimrc
 
 # dwm
-#!/.config/dwm
-#!/.config/dwm/*
+!/.config/dwm
+!/.config/dwm/*
 
 # st
 !/.config/st
