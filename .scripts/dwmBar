@@ -17,8 +17,22 @@ bat(){
 		fi
 }
 
+wifi(){
+		en="$(cat /sys/class/net/en*/operstate)"
+		wf="$(cat /sys/class/net/w*/operstate)"
+		if [ $en = "up" ]; then
+				echo -e ""
+		elif [ $wf = "up" ]; then
+				wfsig=$(awk '/^\s*w/ {print int($3*100/70)}' /proc/net/wireless)
+				echo -e " ${wfsig}%"
+		else
+				echo -e ""
+		fi
+}
+
 while true; do
 		xsetroot -name "$(bat) $(vol) | $(dt)"
+		echo "$(bat) $(wifi) | $(vol) | $(dt)"
 		sleep 1s
 done
 
