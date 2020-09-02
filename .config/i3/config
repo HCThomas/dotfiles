@@ -4,53 +4,52 @@
 gaps inner 2
 gaps outer 2
 default_border pixel 2
-font pango:Noto Mono 9
+font pango:Monospace 9
 
 # Variables
-set $bg-color				#1d1f21
-set $inactive-bg-color 		#2f343f
-set $urgent-bg-color 		#E53935
-set $text-color 			#f3f4f5
-set $inactive-text-color	#676E7D
-set $indicator				#000000
-set $separator				#757575
-set $focused-border			#C70039
-set $locker i3lock -c 1d1f21
+set $f-b	#641e16
+set $i-b 	#17202a
+set $u-b 	#922b21
+set $t 		#f3f4f5
+set $mod Mod4
 
-# class                 border				background 			text    				indicator	child_border
-client.focused			$bg-color			$bg-color			$text-color				$indicator	$focused-border
-client.focused_inactive	$inactive-bg-color	$inactive-bg-color	$inactive-text-color	$indicator	$inactive-bg-color
-client.unfocused		$inactive-bg-color	$inactive-bg-color	$inactive-text-color	$indicator	$inactive-bg-color
-client.urgent			$urgent-bg-color	$urgent-bg-color	$text-color				$indicator	$urgent-bg-color
+# class                 border  backgr. text    indicator 	child_border
+client.focused          $f-b 	$f-b 	$t 		$f-b   		$f-b
+client.focused_inactive $i-b 	$i-b 	$t 		$i-b   		$i-b
+client.unfocused        $i-b 	$i-b 	$t 		$i-b   		$i-b
+client.urgent           $u-b 	$u-b	$t 		$u-b  		$u-b
+client.placeholder      $i-b 	$i-b 	$t 		$i-b   		$i-b
+client.background       $i-b
 
 # i3bar
 bar {
         status_command i3blocks
 		position top
 		colors {
-				background $bg-color
-				separator $separator
-				# class				border				background			text
-				focused_workspace	$bg-color			$bg-color			$text-color
-				inactive_workspace	$inactive-bg-color	$inactive-bg-color	$incative-gb-color
-				urgent_workspace	$urgent-bg-color	$urgent-bg-color	$text-color
+			background $i-b 
+        	statusline $t
+        	separator $t
+			# class				border	backgr.	text
+        	focused_workspace  	$f-b 	$f-b 	$t
+        	active_workspace   	$i-b	$i-b 	$t
+        	inactive_workspace 	$i-b	$i-b 	$t
+        	urgent_workspace   	$u-b	$u-b 	$t
 		}
 }
 
 ## Applications
 exec_always --no-startup-id feh --bg-scale ~/.config/wp.png
-exec --no-startup-id nm-applet
 exec --no-startup-id picom -f
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 1d1f21 --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c 17202a --nofork
 
 ## Bindings
-set $mod Mod4
-floating_modifier $mod
-bindsym $mod+Return exec $TERMINAL
-bindsym $mod+b exec $BROWSER
-bindsym $mod+p exec rangerTermite
-bindsym $mod+shift+c kill
+bindsym $mod+Return exec termite
+bindsym $mod+b exec google-chrome-stable
+bindsym $mod+p exec termite -e ranger
 bindsym $mod+d exec dmenu_run
+bindsym $mod+Shift+c kill
+
+floating_modifier $mod
 
 # Volume
 bindsym $mod+F12 exec --no-startup-id pamixer -i 5 && pkill -RTMIN+1 i3blocks
@@ -123,8 +122,10 @@ bindsym $mod+r mode "resize"
 mode "gaps" {
 		bindsym plus gaps inner current plus 2, gaps outer current plus 2
 		bindsym minus gaps inner current minus 2, gaps outer current minus 2
-		bindsym 0 gaps inner current set 0, gaps outer current set 0
-		bindsym r gaps inner current set 2, gaps outer current set 2
+		bindsym Shift+minus gaps inner current set 0, gaps outer current set 0
+
+
+		bindsym Shift+plus gaps inner current set 2, gaps outer current set 2
 
 		bindsym Return mode "default"
 		bindsym Escape mode "default"
@@ -149,7 +150,7 @@ set $layout (s)tacking, (t)abbed, (e)toggled split
 mode "$system" {
 		bindsym 1 reload, mode "default"
 		bindsym 2 restart, mode "default"
-		bindsym l exec $locker, mode "default"
+		bindsym l exec i3lock -c 17202a, mode "default"
 		bindsym e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'", mode "default"
 		bindsym s exec systemctl suspend, mode "default"
 		bindsym r exec "i3-nagbar -t warning -m 'Reboot computer?' -B 'Yes' 'reboot'", mode "default"
@@ -159,7 +160,7 @@ mode "$system" {
 		bindsym Escape mode "default"
 }
 bindsym $mod+Escape mode "$system"
-set $system (1)eload, (2)restart, (l)ock, (e)xit, (s)uspend, (r)eboot, (s)uspend, (shift+s)hutdown
+set $system (1)eload, (2)restart, (l)ock, (e)xit, (r)eboot, (s)uspend, (shift+s)hutdown
 
 ## Workspaces
 set $ws1 "1"
