@@ -1,6 +1,10 @@
 [[ $- != *i* ]] && return
 
-PS1='\e[1;32m\W$ \e[m'
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+export PS1="\e[1;32m\W\e[91m\$(parse_git_branch)$ \e[m"
 
 HISTSIZE=1000
 HISTFILESIZE=2000
@@ -10,39 +14,39 @@ shopt -s autocd
 
 ## Aliases
 # ls
-alias ls='ls -h --color=auto --group-directories-first'
-alias la='ls -A'
+alias ls="ls -h --color=auto --group-directories-first"
+alias la="ls -A"
 
 # Grep
-alias grep='grep --color=auto'
+alias grep="grep --color=auto"
 
 # Pacman
-alias p='sudo pacman'
-alias pu='sudo pacman -Syu'
-alias ps='sudo pacman -S'
-alias pss='sudo pacman -Ss'
+alias p="sudo pacman"
+alias pu="sudo pacman -Syu"
+alias ps="sudo pacman -S"
+alias pss="sudo pacman -Ss"
 
 # Yay
-alias yu='yay -Syu'
-alias ys='yay -S'
-alias yss='yay -Ss'
+alias yu="yay -Syu"
+alias ys="yay -S"
+alias yss="yay -Ss"
 
 # Git
-alias ga='git add .'
-alias gc='git commit -m'
-alias gp='git push'
-alias gu='git pull'
+alias ga="git add ."
+alias gc="git commit -m"
+alias gp="git push"
+alias gu="git pull"
 
 # Vim
-alias v='vim'
-alias sv='sudo vim'
+alias v="vim"
+alias sv="sudo vim"
 
 # Ranger
-alias r='ranger'
+alias r="ranger"
 
 # Load Xresource
-alias xr='xrdb ~/.Xresources'
+alias xr="xrdb ~/.Xresources"
 
 # Recompile dwm
-alias mdwm='cd ~/.config/dwm && sudo make clean install'
-alias mst='cd ~/.config/st && sudo make clean install'
+alias mdwm="cd ~/.config/dwm && sudo make clean install"
+alias mst="cd ~/.config/st && sudo make clean install"
