@@ -15,8 +15,10 @@ HISTFILESIZE=2000
 alias ls="ls -h --color=auto --group-directories-first"
 alias la="ls -A"
 
+#cd
 # cd without typing cd
 shopt -s autocd
+alias C="cd"
 c() {
       if [ -n "$1" ]; then
         cd "$1" || return 1
@@ -25,7 +27,9 @@ c() {
       fi
       la -l
 }
-C() { cd; }
+
+# Cat
+alias a="cat"
 
 # Grep
 alias grep="grep --color=auto"
@@ -70,7 +74,7 @@ alias i3c="v ~/.config/i3/config"
 alias brc="v ~/.bashrc"
 alias vc="v ~/.vimrc"
 alias Xrc="v ~/.Xresources"
-alias dwmc=" v ~/.config/dwm/config.def.h"
-alias stc="v ~/.config/st/config.def.h"
+alias dwmc="cd ~/.config/dwm &&  v config.def.h"
+alias stc="cd ~/.config/st/ && v config.def.h"
 alias tc="v ~/.config/termite/config"
 alias sbrc="source ~/.bashrc"

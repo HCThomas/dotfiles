@@ -4,6 +4,23 @@
 ## exept these files
 !.config
 
+# dwm
+!.config/dwm
+!.config/dwm/*
+.config/dwm/config.h
+.config/dwm/drw.o
+.config/dwm/dwm
+.config/dwm/dwm.o
+.config/dwm/util.o
+
+# st
+!.config/st
+!.config/st/*
+.config/st/config.h
+.config/st/st
+.config/st.o
+.config/x.o
+
 # Wallpaper
 !.config/wp.png
 

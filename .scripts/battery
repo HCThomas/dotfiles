@@ -1,0 +1,59 @@
+#!/bin/bash		
+
+FILE=/sys/class/power_supply/BAT0
+if [ -e "$FILE" ]; then
+		bat="$(cat $FILE/capacity)"
+		if [ "${bat}" -lt "10" ]; then
+				batbar="|:::::::::"
+		elif [ "${bat}" -ge "10" ] && [ "${bat}" -lt "20" ]; then
+				batbar="|:::::::::"
+		elif [ "${bat}" -ge "20" ] && [ "${bat}" -lt "30" ]; then
+				batbar="||::::::::"
+		elif [ "${bat}" -ge "30" ] && [ "${bat}" -lt "40" ]; then
+				batbar="|||:::::::"
+		elif [ "${bat}" -ge "40" ] && [ "${bat}" -lt "50" ]; then
+				batbar="||||::::::"
+		elif [ "${bat}" -ge "50" ] && [ "${bat}" -lt "60" ]; then
+				batbar="|||||:::::"
+		elif [ "${bat}" -ge "60" ] && [ "${bat}" -lt "70" ]; then
+				batbar="||||||::::"
+		elif [ "${bat}" -ge "70" ] && [ "${bat}" -lt "80" ]; then
+				batbar="|||||||:::"
+		elif [ "${bat}" -ge "80" ] && [ "${bat}" -lt "90" ]; then
+				batbar="||||||||::"
+		elif [ "${bat}" -ge "90" ] && [ "${bat}" -lt "100" ]; then
+				batbar="|||||||||:"
+		elif [ "${bat}" -eq "100" ]; then
+				batbar="||||||||||"
+		fi 
+				
+		echo -e " ${batbar} ${bat}%"
+fi
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
+           		
