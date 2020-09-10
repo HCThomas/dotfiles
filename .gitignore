@@ -8,6 +8,8 @@
 !.config/dwm
 !.config/dwm/*
 .config/dwm/config.h
+.config/dwm/config.h.org
+.config/dwm/.config.def.h.org
 .config/dwm/drw.o
 .config/dwm/dwm
 .config/dwm/dwm.o
@@ -17,6 +19,8 @@
 !.config/st
 !.config/st/*
 .config/st/config.h
+.config/st/config.h.org
+.config/st/config.def.h.org
 .config/st/st
 .config/st.o
 .config/x.o
