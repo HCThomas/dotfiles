@@ -33,7 +33,7 @@ static const char *lock[] = { "i3lock", "-c", col_gray1,  NULL };
 /* shutdown */
 static const char *shutdown[] = { "shutdown", "now",  NULL };
 /* browser */
-static const char *browser[] = { "google-chrome-stable",  NULL };
+static const char *browser[] = { "brave",  NULL };
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };

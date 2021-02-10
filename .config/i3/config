@@ -45,7 +45,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c "$i-b" --nofork
 
 ## Bindings
 bindsym $mod+Return exec termite
-bindsym $mod+b exec google-chrome-stable
+bindsym $mod+b exec brave
 bindsym $mod+p exec termite -e ranger
 bindsym $mod+d exec dmenu_run -nb "$i-b" -nf "$t" -sb "$f-b" -sf "$t"
 bindsym $mod+Shift+c kill
@@ -124,8 +124,6 @@ mode "gaps" {
 		bindsym plus gaps inner current plus 2, gaps outer current plus 2
 		bindsym minus gaps inner current minus 2, gaps outer current minus 2
 		bindsym Shift+minus gaps inner current set 0, gaps outer current set 0
-
-
 		bindsym Shift+plus gaps inner current set 2, gaps outer current set 2
 
 		bindsym Return mode "default"

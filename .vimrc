@@ -14,3 +14,5 @@ set bg=dark
 call plug#begin('~/.vim/plugged')
 Plug 'chrisbra/Colorizer'
 call plug#end()
+
+imap jk <Esc>
