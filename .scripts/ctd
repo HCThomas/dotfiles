@@ -1,0 +1,2 @@
+#!/bin/bash
+xrandr --output DP-4 --auto --output DP-3 --auto --left-of DP-4 --output HDMI-0 --off

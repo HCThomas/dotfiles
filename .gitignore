@@ -38,8 +38,7 @@
 
 # Picom
 !.config/picom
-!.config/picom/picom.conf.v
-!.config/picom/picom.conf.c
+!.config/picom/*
 
 # Ranger
 !.config/ranger
