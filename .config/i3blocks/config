@@ -1,22 +1,11 @@
 separator_block_width=15
 
-#[battery2]
-#command=battery2
-#markup=pango
-#interval=30
-
-#[volume]
-#command=volume
-#interval=once
-#signal=1
-#USE_ALSA_NAME=1
-
 [battery]
 command=battery
 interval=30
 
-[volume2]
-command=volume2
+[volume]
+command=echo " $(pamixer --get-volume-human)"
 interval=once
 signal=1
 
