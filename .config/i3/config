@@ -7,47 +7,47 @@ default_border pixel 2
 font pango:Monospace 9
 
 # Variables
-set $f-b	#641e16
-set $i-b 	#17202a
-set $u-b 	#922b21
-set $t 		#f3f4f5
+set $bFocused	#ff92d0
+set $bInactive 	#282a36
+set $bUrgent 	#ff5555
+set $bText 		#dcdccc
 
 set $mod Mod4
 
-# class                 border  backgr. text    indicator 	child_border
-client.focused          $f-b 	$f-b 	$t 		$f-b   		$f-b
-client.focused_inactive $i-b 	$i-b 	$t 		$i-b   		$i-b
-client.unfocused        $i-b 	$i-b 	$t 		$i-b   		$i-b
-client.urgent           $u-b 	$u-b	$t 		$u-b  		$u-b
-client.placeholder      $i-b 	$i-b 	$t 		$i-b   		$i-b
-client.background       $i-b
+# class                 border  	backgr. 	text    	indicator 			child_border
+client.focused          $bFocused 	$bFocused 	$bText 		$bFocused   		$bFocused
+client.focused_inactive $bInactive 	$bInactive 	$bText 		$bInactive   		$bInactive
+client.unfocused        $bInactive 	$bInactive 	$bText 		$bInactive   		$bInactive
+client.urgent           $bUrgent 	$bUrgent	$bText 		$bUrgent  			$bUrgent
+client.placeholder      $bInactive 	$bInactive 	$bText 		$bInactive   		$bInactive
+client.background       $bInactive
 
 # i3bar
 bar {
         status_command i3blocks
 		position top
 		colors {
-			background $i-b 
-        	statusline $t
-        	separator $t
-			# class				border	backgr.	text
-        	focused_workspace  	$f-b 	$f-b 	$t
-        	active_workspace   	$i-b	$i-b 	$t
-        	inactive_workspace 	$i-b	$i-b 	$t
-        	urgent_workspace   	$u-b	$u-b 	$t
+			background $bInactive 
+        	statusline $bText
+        	separator $bText
+			# class				border		backgr.		text
+        	focused_workspace  	$bFocused 	$bFocused 	$bText
+        	active_workspace   	$bInactive	$bInactive 	$bText
+        	inactive_workspace 	$bInactive	$bInactive 	$bText
+        	urgent_workspace   	$bUrgent	$bUrgent 	$bText
 		}
 }
 
 ## Applications
 exec_always --no-startup-id feh --bg-scale ~/.config/wp.png
 exec --no-startup-id picom -f
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c "$i-b" --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c "$bInactive" --nofork
 
 ## Bindings
 bindsym $mod+Return exec termite
 bindsym $mod+b exec brave
 bindsym $mod+p exec termite -e ranger
-bindsym $mod+d exec dmenu_run -nb "$i-b" -nf "$t" -sb "$f-b" -sf "$t"
+bindsym $mod+d exec dmenu_run -nb "$bInactive" -nf "$bText" -sb "$bFocused" -sf "$bText"
 bindsym $mod+Shift+c kill
 
 floating_modifier $mod
@@ -131,6 +131,7 @@ mode "gaps" {
 		bindsym $mod+g mode "default"
 }
 bindsym $mod+g mode "gaps"
+set $gaps (+)(-), (shift+)(shift-)
 
 # change container layout
 mode "$layout" {
@@ -149,14 +150,11 @@ set $layout (s)tacking, (t)abbed, (e)toggled split
 mode "$system" {
 		bindsym 1 reload, mode "default"
 		bindsym 2 restart, mode "default"
-		bindsym l exec i3lock -c "$i-b", mode "default"
+		bindsym l exec i3lock -c "$bInactive", mode "default"
 		bindsym e exec i3-msg exit, mode "default"
-		#bindsym e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'", mode "default"
 		bindsym s exec systemctl suspend, mode "default"
 		bindsym r exec reboot, mode "default"
-		#bindsym r exec "i3-nagbar -t warning -m 'Reboot computer?' -B 'Yes' 'reboot'", mode "default"
 		bindsym Shift+s exec shutdown now, mode "default"
-		#bindsym Shift+s exec "i3-nagbar -t warning -m 'Shutdown computer?' -B 'Yes' 'shutdown now'", mode "default"
 
 		bindsym Return mode "default"
 		bindsym Escape mode "default"

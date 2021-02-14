@@ -12,7 +12,7 @@ set bg=dark
 
 " PlugInstall,PlugUpdate,PlugClean
 call plug#begin('~/.vim/plugged')
-Plug 'chrisbra/Colorizer'
+Plug 'lilydjwg/colorizer'
 call plug#end()
 
 imap jk <Esc>

@@ -1,6 +1,5 @@
 #!/bin/bash
 
-mv ~/.config/wp.png ~/.config/wp.png.old
 cp $1 ~/.config/wp.png
 feh --bg-scale ~/.config/wp.png
 notify-send -t 5000 'wallpaper changed'
