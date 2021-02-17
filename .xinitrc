@@ -32,4 +32,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-exec i3
+session=${2:-i3}
+
+case $session in
+    i3) exec i3;;
+    dwm) 	picom -f &
+			feh --bg-scale ~/.config/wp.png &
+			xss-lock --transfer-sleep-lock -- i3lock -c "#17202a" --nofork &
+			dwmBar &
+			exec dwm;;
+    *) exec $1;;
+esac
