@@ -7,6 +7,10 @@
 # Wallpaper
 !.config/wp.png
 
+# dunst
+!.config/dunst
+!.config/dunst/*
+
 # i3
 !.config/i3
 !.config/i3/*
