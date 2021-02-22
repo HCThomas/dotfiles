@@ -1,18 +1,18 @@
 separator_block_width=15
 
 [battery]
-command=battery
+command=sb-battery
 interval=30
 
 [volume]
-command=echo " $(pamixer --get-volume-human)"
+command=sb-volume
 interval=once
 signal=1
 
 [wifi]
-command=wifi
+command=sb-wifi
 interval=10
 
 [clock]
-command=echo " $(date '+%m/%d/%Y %I:%M%p')"
+command=sb-time
 interval=1
