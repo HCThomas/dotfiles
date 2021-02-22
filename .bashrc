@@ -1,6 +1,6 @@
 [[ $- != *i* ]] && return
 
-export PS1="\e[1;32m\W\e[32m> \e[m"
+export PS1="\W> "
 
 HISTSIZE=1000
 HISTFILESIZE=2000
@@ -13,8 +13,6 @@ alias la="ls -A"
 alias ll="ls -al"
 
 #cd
-# cd without typing cd
-shopt -s autocd
 alias C="cd"
 c() {
       if [ -n "$1" ]; then

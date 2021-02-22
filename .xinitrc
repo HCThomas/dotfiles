@@ -40,7 +40,7 @@ case $session in
 			feh --bg-scale ~/.config/wp.png &
 			xss-lock --transfer-sleep-lock -- i3lock -c "#17202a" --nofork &
 			dunst &
-			dwmblocks &
+			dwmBar &
 			exec dwm;;
     *) exec $1;;
 esac
