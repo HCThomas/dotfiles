@@ -34,6 +34,10 @@
 # Scripts
 !.scripts
 !.scripts/*
+!.scripts/test
+!.scripts/test/*
+!.scripts/statusbar
+!.scripts/statusbar/*
 
 # Vim
 !.vim
