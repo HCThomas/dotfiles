@@ -42,5 +42,7 @@ case $session in
 			dunst &
 			dwmblocks &
 			exec dwm;;
+	plasma) export DESKTOP_SESSION=plasma &
+			exec startplasma-x11;;
     *) exec $1;;
 esac
