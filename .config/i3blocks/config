@@ -1,17 +1,29 @@
 separator_block_width=15
 
+[memory]
+command=sb-memory
+interval=2
+
+[cpu]
+command=sb-cpu
+interval=2
+
 [battery]
 command=sb-battery
 interval=30
+
+[nettraf]
+command=sb-nettraf
+interval=2
+
+[wifi]
+command=sb-wifi
+interval=10
 
 [volume]
 command=sb-volume
 interval=once
 signal=1
-
-[wifi]
-command=sb-wifi
-interval=10
 
 [clock]
 command=sb-time
