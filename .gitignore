@@ -11,7 +11,7 @@
 !.local/bin/*
 
 # Wallpaper
-!.local/.share/wall.png
+!.local/share/wall.png
 
 # Alacritty
 !.config/alacritty
