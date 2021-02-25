@@ -9,6 +9,10 @@
 # Wallpaper
 !.config/wp.png
 
+# Alacritty
+!.config/alacritty
+!.config/alacritty/alacritty.yml
+
 # dunst
 !.config/dunst
 !.config/dunst/*
