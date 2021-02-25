@@ -6,6 +6,14 @@
 !.local
 !.local/share
 
+# Scripts
+!.scripts
+!.scripts/*
+!.scripts/test
+!.scripts/test/*
+!.scripts/statusbar
+!.scripts/statusbar/*
+
 # Wallpaper
 !.config/wp.png
 
@@ -15,35 +23,15 @@
 
 # dunst
 !.config/dunst
-!.config/dunst/*
+!.config/dunst/dunstrc
 
 # i3
 !.config/i3
-!.config/i3/*
+!.config/i3/config
 
 # i3blocks
 !.config/i3blocks
-!.config/i3blocks/*
-
-# Picom
-!.config/picom
-!.config/picom/*
-
-# Ranger
-!.config/ranger
-!.config/ranger/*
-
-# Termite
-!.config/termite
-!.config/termite/*
-
-# Scripts
-!.scripts
-!.scripts/*
-!.scripts/test
-!.scripts/test/*
-!.scripts/statusbar
-!.scripts/statusbar/*
+!.config/i3blocks/config
 
 # NVim
 !.config/nvim
@@ -52,6 +40,10 @@
 !.local/share/nvim/site
 !.local/share/nvim/site/autoload
 !.local/share/nvim/site/autoload/plug.vim
+
+# Picom
+!.config/picom
+!.config/picom/picom.conf
 
 # Bash
 !.bash_profile
