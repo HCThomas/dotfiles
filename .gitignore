@@ -44,6 +44,8 @@
 # Bash
 !.bash_profile
 !.bashrc
+!.zshrc
+!.zprofile
 
 # Xinit
 !.xinitrc
