@@ -43,10 +43,10 @@ bar {
 ## Applications
 #############################
 exec_always --no-startup-id feh --bg-scale ~/.config/wp.png
+exec_always --no-startup-id autotiling
 exec --no-startup-id picom -f
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c "$bInactive" --nofork
 exec --no-startup-id dunst
-exec --no-startup-id autotiling
 
 # Scratchpad
 for_window[title="dropdown"] floating enable, resize set 800 600, move scratchpad
@@ -73,12 +73,12 @@ set $ws10 "10"
 bindsym $mod+Return exec $terminal
 bindsym $mod+b exec $browser
 bindsym $mod+p exec $terminal -e lf
+bindsym $mod+shift+p exec pcmanfm
 bindsym $mod+d exec dmenu_run -nb "$bInactive" -nf "$bText" -sb "$bFocused" -sf "$bText"
 bindsym $mod+grave [title="dropdown"] scratchpad show; [title="dropdown"] move position center
 bindsym $mod+e exec dmenuunicode
 bindsym $mod+o exec $terminal -e htop
 bindsym $mod+w exec $terminal -e gotop
-
 
 # Volume
 bindsym $mod+F12 exec --no-startup-id pamixer -i 2 && pkill -RTMIN+1 i3blocks
