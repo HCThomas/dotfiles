@@ -1,5 +1,5 @@
 export PATH="$PATH:$HOME/.scripts"
-export EDITOR="vim"
+export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="brave"
 

@@ -40,17 +40,5 @@ g() {
 }
 
 # Vim
-alias v="vim"
-alias sv="sudo vim"
-
-# Ranger
-alias r="ranger"
-
-# Source .bashrc
-alias sbashrc="source ~/.bashrc"
-
-# Configs
-alias ci3="vim ~/.config/i3/config"
-alias cbashrc="vim ~/.bashrc"
-alias cvim="vim ~/.vimrc"
-alias ctermite="vim ~/.config/termite/config"
+alias v="nvim"
+alias sv="sudo nvim"

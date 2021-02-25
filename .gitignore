@@ -3,6 +3,8 @@
 
 ## exept these files
 !.config
+!.local
+!.local/share
 
 # Wallpaper
 !.config/wp.png
@@ -39,11 +41,13 @@
 !.scripts/statusbar
 !.scripts/statusbar/*
 
-# Vim
-!.vim
-!.vim/autoload
-!.vim/autoload/*
-!.vimrc
+# NVim
+!.config/nvim
+!.config/nvim/init.vim
+!.local/share/nvim
+!.local/share/nvim/site
+!.local/share/nvim/site/autoload
+!.local/share/nvim/site/autoload/plug.vim
 
 # Bash
 !.bash_profile
