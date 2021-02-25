@@ -47,6 +47,8 @@
 
 # Xinit
 !.xinitrc
+!.config/x11
+!.config/xinitrc
 
 # Git
 !.gitconfig
