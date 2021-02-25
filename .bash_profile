@@ -1,4 +1,4 @@
-export PATH="$PATH:$HOME/.scripts"
+export PATH="$PATH:$HOME/.local/bin"
 export EDITOR="nvim"
 export TERMINAL="alacritty"
 export BROWSER="brave"

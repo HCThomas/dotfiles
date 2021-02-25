@@ -17,7 +17,7 @@ command=sb-nettraf
 interval=2
 
 [wifi]
-command=sb-wifi
+command=sb-internet
 interval=10
 
 [volume]
@@ -26,5 +26,5 @@ interval=once
 signal=1
 
 [clock]
-command=sb-time
+command=sb-clock
 interval=1

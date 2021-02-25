@@ -7,12 +7,8 @@
 !.local/share
 
 # Scripts
-!.scripts
-!.scripts/*
-!.scripts/test
-!.scripts/test/*
-!.scripts/statusbar
-!.scripts/statusbar/*
+!.local/bin
+!.local/bin/*
 
 # Wallpaper
 !.config/wp.png
