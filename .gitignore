@@ -11,7 +11,7 @@
 !.local/bin/*
 
 # Wallpaper
-!.config/wp.png
+!.local/.share/wall.png
 
 # Alacritty
 !.config/alacritty
