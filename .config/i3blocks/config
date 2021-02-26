@@ -10,11 +10,6 @@ command=sb-cpu
 color=#f88379
 interval=2
 
-[battery]
-command=sb-battery
-color=#196432
-interval=30
-
 [nettraf]
 command=sb-nettraf
 color=#7d93c8
@@ -23,6 +18,11 @@ interval=2
 [wifi]
 command=sb-internet
 interval=10
+
+[battery]
+command=sb-mybattery
+color=#196432
+interval=30
 
 [volume]
 command=sb-volume

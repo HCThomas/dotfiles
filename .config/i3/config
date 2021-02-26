@@ -4,7 +4,7 @@
 gaps inner 2
 gaps outer 2
 default_border pixel 2
-font pango:Monospace 12
+font pango:Monospace 10
 
 # Variables
 set $bFocused	#ff92d0
