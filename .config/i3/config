@@ -42,7 +42,6 @@ bar {
 #############################
 ## Applications
 #############################
-#exec_always --no-startup-id feh --bg-scale ~/.config/wp.png
 exec_always setbg
 exec_always --no-startup-id autotiling
 exec --no-startup-id picom -f
