@@ -7,7 +7,7 @@ default_border pixel 2
 font pango:Monospace 10
 
 # Variables
-set $bFocused	#ff92d0
+set $bFocused	#bf8ac2
 set $bInactive 	#282a36
 set $bUrgent 	#ff5555
 set $bText 		#dcdccc
