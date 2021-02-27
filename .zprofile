@@ -1,7 +1,8 @@
 export PATH="$PATH:$HOME/.local/bin"
 
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+#export TERMINAL="alacritty"
+export TERMINAL="termite"
 export BROWSER="brave"
 
 export XDG_CONFIG_HOME="$HOME/.config"
