@@ -49,9 +49,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c "$bInactive" --
 exec --no-startup-id dunst
 
 # Scratchpad
-for_window[title="dropdown"] floating enable, resize set 800 600, move scratchpad
+for_window[title="dropdown"] floating enable, sticky enable, resize set 800 700, move scratchpad
 exec --no-startup-id $terminal -t dropdown
-for_window[instance="kpscratchpad"] floating enable, resize set 800 600, move scratchpad
+for_window[instance="kpscratchpad"] floating enable, sticky enable, resize set 800 700, move scratchpad
 exec --no-startup-id keepassxc -name kpscratchpad
 
 #############################
@@ -73,15 +73,13 @@ set $ws10 "10"
 ## Bindings
 #############################
 bindsym $mod+Return exec --no-startup-id $terminal
-bindsym $mod+b exec --no-startup-id $browser
-bindsym $mod+p exec --no-startup-id $terminal -e lf
-bindsym $mod+shift+p exec --no-startup-id pcmanfm
+bindsym $mod+w exec --no-startup-id $browser
+bindsym $mod+e exec --no-startup-id $terminal -e lf
+bindsym $mod+shift+e exec --no-startup-id pcmanfm
 bindsym $mod+d exec --no-startup-id dmenu_run -nb "$bInactive" -nf "$bText" -sb "$bFocused" -sf "$bText"
+
 bindsym $mod+grave [title="dropdown"] scratchpad show; [title="dropdown"] move position center
 bindsym $mod+shift+grave [instance="kpscratchpad"] scratchpad show; [instance="kpscratchpad"] move position center
-bindsym $mod+e exec --no-startup-id dmenuunicode
-bindsym $mod+o exec --no-startup-id $terminal -e htop
-bindsym $mod+w exec --no-startup-id $terminal -e gotop
 
 # Volume
 bindsym $mod+F12 exec --no-startup-id pamixer -i 2 && pkill -RTMIN+1 i3blocks
@@ -96,7 +94,7 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +50
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 50-
 
 floating_modifier $mod
-bindsym $mod+Shift+c kill
+bindsym $mod+q kill
 
 # change focus
 bindsym $mod+h focus left
@@ -118,9 +116,20 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# Resize window
+bindsym $mod+shift+y       resize shrink width 2 px or 2 ppt
+bindsym $mod+shift+u       resize grow height 2 px or 2 ppt
+bindsym $mod+shift+i       resize shrink height 2 px or 2 ppt
+bindsym $mod+shift+o       resize grow width 2 px or 2 ppt
+
+# Change Gaps
+bindsym $mod+plus gaps inner current plus 2, gaps outer current plus 2
+bindsym $mod+minus gaps inner current minus 2, gaps outer current minus 2
+bindsym $mod+Shift+minus gaps inner current set 0, gaps outer current set 0
+bindsym $mod+Shift+plus gaps inner current set 2, gaps outer current set 2
+
 # split orientation
-bindsym $mod+Shift+v split h
-bindsym $mod+v split v
+bindsym $mod+t split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -162,35 +171,6 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 #############################
 # Mode
 #############################
-mode "resize" {
-        bindsym h       resize shrink width 10 px or 10 ppt
-        bindsym j       resize grow height 10 px or 10 ppt
-        bindsym k       resize shrink height 10 px or 10 ppt
-        bindsym l       resize grow width 10 px or 10 ppt
-        bindsym Left        resize shrink width 10 px or 10 ppt
-        bindsym Down        resize grow height 10 px or 10 ppt
-        bindsym Up          resize shrink height 10 px or 10 ppt
-        bindsym Right       resize grow width 10 px or 10 ppt
-
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
-}
-bindsym $mod+r mode "resize"
-
-mode "$gaps" {
-		bindsym plus gaps inner current plus 2, gaps outer current plus 2
-		bindsym minus gaps inner current minus 2, gaps outer current minus 2
-		bindsym Shift+minus gaps inner current set 0, gaps outer current set 0
-		bindsym Shift+plus gaps inner current set 2, gaps outer current set 2
-
-		bindsym Return mode "default"
-		bindsym Escape mode "default"
-		bindsym $mod+g mode "default"
-}
-		bindsym $mod+g mode "$gaps"
-set $gaps (+)(-), (shift+)(shift-)
-
 mode "$layout" {
 		bindsym s layout stacking, mode "default"
 		bindsym t layout tabbed, mode "default"
@@ -204,17 +184,16 @@ bindsym $mod+z mode "$layout"
 set $layout (s)tacking, (t)abbed, (e)toggled split
 
 mode "$system" {
-		bindsym 1 reload, mode "default"
-		bindsym 2 restart, mode "default"
+		bindsym F1 exec shutdown now, mode "default"
+		bindsym F2 exec reboot, mode "default"
+		bindsym F3 exec i3-msg exit, mode "default"
+		bindsym F4 restart, mode "default"
+		bindsym F5 reload, mode "default"
 		bindsym l exec i3lock -c "$bInactive", mode "default"
-		bindsym e exec i3-msg exit, mode "default"
-		bindsym s exec systemctl suspend, mode "default"
-		bindsym r exec reboot, mode "default"
-		bindsym Shift+s exec shutdown now, mode "default"
 
 		bindsym Return mode "default"
 		bindsym Escape mode "default"
 }
 bindsym $mod+Escape mode "$system"
-set $system (1)eload, (2)restart, (l)ock, (e)xit, (r)eboot, (s)uspend, (shift+s)hutdown
+set $system (F1)shutdown, (F2)reboot, (F3)exit, (F4)restart, (F5)reload, (l)lock
 
