@@ -44,7 +44,8 @@
 
 # Picom
 !.config/picom
-!.config/picom/picom.conf
+!.config/picom/picom.conf.desktop
+!.config/picom/picom.conf.laptop
 
 # zsh
 !.zshrc
