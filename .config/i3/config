@@ -27,6 +27,7 @@ client.background       $bInactive
 bar {
         status_command i3blocks
 		position top
+		tray_output primary
 		colors {
 			background $bInactive 
         	statusline $bText
