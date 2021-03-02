@@ -1,2 +1,2 @@
 #!/bin/bash
-rsync -vrP --delete-after root@holdenthomas.net:/var/www/holdenthomas ~/website/holdenthomas
+rsync -vrP --delete-after root@holdenthomas.net:/var/www/holdenthomas ~/website

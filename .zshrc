@@ -16,6 +16,8 @@ alias ls="ls -h --color=auto --group-directories-first"
 alias la="ls -A"
 alias ll="ls -al"
 
+alias rm="rm -Rf"
+
 #cd
 alias C="cd"
 c() {
