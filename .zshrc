@@ -11,15 +11,17 @@ SAVEHIST=1000000
 HISTFILE=~/.cache/zsh/.histfile
 
 ## Aliases
-# ls
 alias ls="ls -h --color=auto --group-directories-first"
 alias la="ls -A"
 alias ll="ls -al"
-
 alias rm="rm -Rf"
-
-#cd
 alias C="cd"
+alias grep="grep --color=auto"
+alias p="sudo pacman"
+alias y="yay"
+alias v="nvim"
+alias sv="sudo nvim"
+alias gtp="cd /run/media/holden/storage/Sync/Stuff/9/7/Special"
 c() {
       if [ -n "$1" ]; then
         cd "$1" || return 1
@@ -28,26 +30,11 @@ c() {
       fi
       la -l
 }
-
-# Grep
-alias grep="grep --color=auto"
-
-# Pacman
-alias p="sudo pacman"
-
-# Yay
-alias y="yay"
-
-# Git
 g() {
 		git add .
 		git commit -m "$1"
 		git push
 }
-
-# Vim
-alias v="nvim"
-alias sv="sudo nvim"
 
 # Basic auto/tab complete:
 autoload -U compinit
