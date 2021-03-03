@@ -22,6 +22,7 @@ alias y="yay"
 alias v="nvim"
 alias sv="sudo nvim"
 alias gtp="cd /run/media/holden/storage/Sync/Stuff/9/7/Special"
+alias gts="cd /run/media/holden/storage/Sync"
 c() {
       if [ -n "$1" ]; then
         cd "$1" || return 1
