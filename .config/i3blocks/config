@@ -1,5 +1,9 @@
 separator_block_width=15
 
+[forecast]
+command=sb-forecast
+interval=1000
+
 [memory]
 command=sb-memory
 color=#cca4bd
