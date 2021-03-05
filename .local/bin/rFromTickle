@@ -1,2 +1,0 @@
-#!/bin/bash
-rsync -vrP --delete-after root@ticklemaan.com:/var/www/ticklemaan ~/website

@@ -20,7 +20,7 @@ command=sb-internet
 interval=10
 
 [battery]
-command=sb-mybattery
+command=sb-battery
 color=#196432
 interval=30
 

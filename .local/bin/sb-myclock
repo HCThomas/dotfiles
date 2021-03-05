@@ -1,2 +1,0 @@
-#!/bin/bash
-echo "🕑 $(date '+%m/%d/%Y %I:%M%p')"
