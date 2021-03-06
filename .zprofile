@@ -9,4 +9,5 @@ export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 
 # Start i3
-[ "$(tty)" = "/dev/tty1" ] && pgrep -x i3 || exec startx
+#[ "$(tty)" = "/dev/tty1" ] && pgrep -x i3 && exec startx
+[ "$(tty)" = "/dev/tty1" ] && exec startx
