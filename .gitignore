@@ -52,6 +52,9 @@
 !.zshrc
 !.zprofile
 
+# ls colors
+!.dir_colors
+
 # Xinit
 !.xinitrc
 
