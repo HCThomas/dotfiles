@@ -3,33 +3,41 @@ separator_block_width=15
 
 [forecast]
 command=sb-forecast
-interval=1000
+color=#a3ffb4
+interval=once
 
 [memory]
 command=sb-memory
+color=#6e57d2
 interval=2
 
 [cpu]
 command=sb-cpu
+color=#a0978d
 interval=2
 
 [nettraf]
 command=sb-nettraf
+color=#03989e
 interval=2
 
 [wifi]
 command=sb-internet
+color=#546e29
 interval=10
 
 [battery]
 command=sb-battery
+color=#f8a2ab
 interval=30
 
 [volume]
 command=sb-volume
+color=#ce7322
 interval=once
 signal=1
 
 [clock]
 command=sb-clock
+color=#cbb9aa
 interval=1
