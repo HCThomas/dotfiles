@@ -96,4 +96,4 @@ bindkey '^e' edit-command-line
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
 
 # Change ls colors for making ntfs mounted partitions readable
-eval $(dircolors -p > .dir_colors)
+eval $(dircolors -b > .dir_colors)
