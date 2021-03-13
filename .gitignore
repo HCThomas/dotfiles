@@ -9,6 +9,7 @@
 # Scripts
 !.local/bin
 !.local/bin/*
+!.local/bin/statusBar/*
 
 # Wallpaper
 !.local/share/bg
