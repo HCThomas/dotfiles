@@ -35,6 +35,11 @@
 !.config/i3blocks
 !.config/i3blocks/config
 
+# Nordvpn
+!.config/nordvpn
+!.config/nordvpn/servers
+!.config/nordvpn/servers/*
+
 # NVim
 !.config/nvim
 !.config/nvim/init.vim
