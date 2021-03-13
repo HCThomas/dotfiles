@@ -1,19 +1,23 @@
+# Variables
+set $bFocused		#bf8ac2
+set $bInactive 		#282a36
+set $bInactiveT 	#282a36f0
+set $bUrgent 		#ff5555
+set $bText 			#dcdccc
+set $font SauceCodePro Nerd Font Regular 10
+set $dmenufont SauceCodePro Nerd Font-10
+set $mod Mod4
+set $terminal alacritty
+set $browser brave
+
 #############################
 # Appearance
 #############################
 gaps inner 2
 gaps outer 2
 default_border pixel 2
-font pango:SauceCodePro Nerd Font Regular 10
+font pango:$font
 
-# Variables
-set $bFocused	#bf8ac2
-set $bInactive 	#282a36
-set $bUrgent 	#ff5555
-set $bText 		#dcdccc
-set $mod Mod4
-set $terminal alacritty
-set $browser brave
 
 # class                 border  	backgr. 	text    	indicator 			child_border
 client.focused          $bFocused 	$bFocused 	$bText 		$bFocused   		$bFocused
@@ -28,8 +32,9 @@ bar {
         status_command i3blocks
 		position top
 		tray_output primary
+		i3bar_command i3bar --transparency
 		colors {
-			background $bInactive 
+			background $bInactiveT 
         	statusline $bText
         	separator $bText
 			# class				border		backgr.		text
@@ -78,10 +83,10 @@ bindsym $mod+Return exec --no-startup-id $terminal
 bindsym $mod+w exec --no-startup-id $browser
 bindsym $mod+e exec --no-startup-id $terminal -e lf
 bindsym $mod+shift+e exec --no-startup-id pcmanfm
-bindsym $mod+d exec --no-startup-id dmenu_run -nb "$bInactive" -nf "$bText" -sb "$bFocused" -sf "$bText"
+bindsym $mod+d exec --no-startup-id dmenu_run -nb "$bInactive" -nf "$bText" -sb "$bFocused" -sf "$bText" -fn "$dmenufont"
 
 bindsym $mod+grave [title="dropdown"] scratchpad show; [title="dropdown"] move position center
-bindsym $mod+shift+grave [instance="kpscratchpad"] scratchpad show; [instance="kpscratchpad"] move position center
+bindsym $mod+p [instance="kpscratchpad"] scratchpad show; [instance="kpscratchpad"] move position center
 
 # Volume
 bindsym $mod+F12 exec --no-startup-id pamixer -i 2 && pkill -RTMIN+1 i3blocks
