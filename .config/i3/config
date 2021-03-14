@@ -13,8 +13,8 @@ set $browser brave
 #############################
 # Appearance
 #############################
-gaps inner 2
-gaps outer 2
+gaps inner 4
+gaps outer 4
 default_border pixel 2
 font pango:$font
 
@@ -130,10 +130,10 @@ bindsym $mod+shift+i       resize shrink height 2 px or 2 ppt
 bindsym $mod+shift+o       resize grow width 2 px or 2 ppt
 
 # Change Gaps
-bindsym $mod+plus gaps inner current plus 2, gaps outer current plus 2
-bindsym $mod+minus gaps inner current minus 2, gaps outer current minus 2
-bindsym $mod+Shift+minus gaps inner current set 0, gaps outer current set 0
-bindsym $mod+Shift+plus gaps inner current set 2, gaps outer current set 2
+bindsym $mod+plus gaps inner all plus 2, gaps outer all plus 2
+bindsym $mod+minus gaps inner all minus 2, gaps outer all minus 2
+bindsym $mod+Shift+minus gaps inner all set 0, gaps outer all set 0
+bindsym $mod+Shift+plus gaps inner all set 4, gaps outer all set 4
 
 # split orientation
 bindsym $mod+t split toggle
