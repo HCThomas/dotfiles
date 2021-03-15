@@ -1,4 +1,0 @@
-#!/bin/sh
-
-cp $1 ~/.local/share/wall.png
-notify-send -t 5000 'wallpaper changed'
