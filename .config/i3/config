@@ -37,7 +37,7 @@ bar {
 			background $bInactiveT 
         	statusline $bText
         	separator $bText
-			# class				border		backgr.		text
+		# class				border		backgr.		text
         	focused_workspace  	$bFocused 	$bFocused 	$bText
         	active_workspace   	$bInactive	$bInactive 	$bText
         	inactive_workspace 	$bInactive	$bInactive 	$bText
