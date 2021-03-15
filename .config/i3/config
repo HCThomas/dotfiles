@@ -53,8 +53,7 @@ exec_always --no-startup-id autotiling
 exec --no-startup-id picom -f
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -c "$bInactive" --nofork
 exec --no-startup-id dunst
-exec --no-startup-id setnzxt
-exec --no-startup-id ckb-next -b
+exec --no-startup-id setrgb
 
 
 #############################
