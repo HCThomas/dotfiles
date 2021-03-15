@@ -1,4 +1,4 @@
 #!/bin/sh
 
 file=/sys/class/power_supply/BAT0
-[ -f $file ] && capacity=$(cat "$file/capacity") && echo " $capacity%"
+[ ! -f $file ] && capacity=$(cat "$file/capacity") && echo "  $capacity%"
