@@ -20,6 +20,4 @@ batteryfunc() {
 	done && exit 0
 }
 
-file=/sys/class/power_supply/BAT0
-[ -f $file ] && batteryfunc
-#capacity=$(cat "$file/capacity") && echo "  $capacity%"
+[ -d /sys/class/power_supply/BAT* ] && batteryfunc
