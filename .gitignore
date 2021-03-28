@@ -49,6 +49,15 @@
 !.config/picom/picom.conf.desktop
 !.config/picom/picom.conf.laptop
 
+# Sxiv
+!.config/sxiv
+!.config/sxiv/exec
+!.config/sxiv/exec/key-handler
+
+# lf
+!.config/lf
+!.config/lf/lfrc
+
 # zsh
 !.zshrc
 !.zprofile
