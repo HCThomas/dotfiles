@@ -24,8 +24,8 @@ alias p="sudo pacman"
 alias y="yay"
 alias v="nvim"
 alias sv="sudo nvim"
-alias gtp="cd /run/media/holden/storage/Sync/Stuff/9/7/Special"
-alias gts="cd /run/media/holden/storage/Sync"
+alias gtp="cd /run/media/holden/HDD8T/Sync/Stuff/9/7/Special"
+alias gts="cd /run/media/holden/HDD8T/Sync"
 alias upMirrors="sudo reflector --verbose --latest 50 --sort rate --save /etc/pacman.d/mirrorlist"
 c() {
       if [ -n "$1" ]; then
