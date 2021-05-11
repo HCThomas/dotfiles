@@ -34,7 +34,7 @@ bar {
 		tray_output primary
 		i3bar_command i3bar --transparency
 		colors {
-			background $bInactiveT 
+			background $bInactiveT
         	statusline $bText
         	separator $bText
 		# class				border		backgr.		text
@@ -81,8 +81,8 @@ bindsym $mod+d exec --no-startup-id dmenu_run -nb "$bInactive" -nf "$bText" -sb 
 
 # Scratchpad
 for_window[class="Alacritty" title="dropdown"] floating enable, sticky enable, resize set 800 700, move scratchpad
-bindsym $mod+grave [class="Alacritty" title="dropdown"] scratchpad show; [class="Alacritty" title="dropdown"] move position center
-bindsym $mod+shift+grave exec --no-startup-id $terminal -t dropdown
+bindsym $mod+shift+Return [class="Alacritty" title="dropdown"] scratchpad show; [class="Alacritty" title="dropdown"] move position center
+bindsym $mod+apostrophe exec --no-startup-id $terminal -t dropdown
 
 for_window[instance="kpscratchpad"] floating enable, sticky enable, resize set 800 700, move scratchpad
 bindsym $mod+p [instance="kpscratchpad"] scratchpad show; [instance="kpscratchpad"] move position center
@@ -207,4 +207,3 @@ mode "$system" {
 }
 bindsym $mod+Escape mode "$system"
 set $system (F1)shutdown, (F2)reboot, (F3)exit, (F4)restart, (F5)reload, (l)lock
-
