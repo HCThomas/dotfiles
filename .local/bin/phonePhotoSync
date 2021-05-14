@@ -1,0 +1,2 @@
+#!/bin/sh
+rsync --verbose --progress --omit-dir-times --no-perms --recursive --inplace --ignore-existing --size-only --exclude=/run/media/holden/HDD8T/Sync/Pictures/Itunes\ Pictures/iPod\ Photo\ Cache /run/media/holden/HDD8T/Sync/Pictures/Itunes\ Pictures/ motorola-motog\(7\)-951C684438CED907D0A09F6AA3A6FE29/android/Pictures/Itunes\ Pictures/
