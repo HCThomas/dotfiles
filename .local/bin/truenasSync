@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -avPn --delete /run/media/holden/HDD8T/Sync/ holden@192.168.0.2:/mnt/Hdds/Storage/Sync/
+rsync -avP --delete /run/media/holden/HDD8T/Sync/ holden@192.168.0.2:/mnt/Hdds/Storage/Sync/
