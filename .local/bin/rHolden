@@ -2,4 +2,4 @@
 
 echo -n "Push to server, no to pull(y,n)"; read input
 
-[ $input = y ] && rsync -vrP --delete-after ~/website/holdenthomas root@holdenthomas.com:/var/www || rsync -vrP --delete-after root@holdenthomas.net:/var/www/holdenthomas ~/website
+[ $input = y ] && rsync -vrP --delete-after ~/website/holdenthomas root@holdenthomas.xys:/var/www || rsync -vrP --delete-after root@holdenthomas.xyz:/var/www/holdenthomas ~/website
