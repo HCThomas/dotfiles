@@ -1,6 +1,7 @@
 #!/bin/sh
 
-i=$(dialog --stdout --menu "Choose option: " 0 0 0  1 "Pull from holdenthomas.xyz" 2 "Pull from tickleman.xyz" 3 "Push to holdenthomas.xyz" 4 "Push to tickleman.xyz")
+i=$(dialog --stdout --menu "Choose option: " 0 0 0  1 "Pull from holdenthomas.xyz" 2 "Pull from tickleman.xyz" 3 "Push to holdenthomas.xyz" 4 "Push to tickleman.xyz") || exit 1
+clear
 
 case $i in
 	1)
