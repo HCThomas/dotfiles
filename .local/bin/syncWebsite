@@ -1,0 +1,14 @@
+#!/bin/sh
+
+i=$(dialog --stdout --menu "Choose option: " 0 0 0  1 "Pull from holdenthomas.xyz" 2 "Pull from tickleman.xyz" 3 "Push to holdenthomas.xyz" 4 "Push to tickleman.xyz")
+
+case $i in
+	1)
+		rsync -vrP --delete-after root@holdenthomas.xyz:/var/www/holdenthomas ~/website ;;
+	2)
+		rsync -vrP --delete-after root@holdenthomas.xyz:/var/www/tickleman ~/website ;;
+	3)
+		rsync -vrP --delete-after ~/website/holdenthomas root@holdenthomas.xyz:/var/www ;;
+	4)
+		rsync -vrP --delete-after ~/website/tickleman root@holdenthomas.xyz:/var/www ;;
+esac
