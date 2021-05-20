@@ -3,9 +3,9 @@ set $bFocused		#bf8ac2
 set $bInactive 		#282a36
 set $bInactiveT 	#282a36f0
 set $bUrgent 		#ff5555
-set $bText 			#dcdccc
-set $font SauceCodePro Nerd Font Regular 10
-set $dmenufont SauceCodePro Nerd Font-10
+set $bText 		#dcdccc
+set $font monospace Regular 10
+set $dmenufont monospace Font-10
 set $mod Mod4
 set $terminal alacritty
 set $browser brave
@@ -13,9 +13,9 @@ set $browser brave
 #############################
 # Appearance
 #############################
-gaps inner 4
-gaps outer 4
-default_border pixel 2
+gaps inner 5
+gaps outer 5
+default_border pixel 3
 font pango:$font
 
 
@@ -87,10 +87,6 @@ bindsym $mod+apostrophe exec --no-startup-id $terminal -t dropdown
 for_window[instance="kpscratchpad"] floating enable, sticky enable, resize set 800 700, move scratchpad
 bindsym $mod+p [instance="kpscratchpad"] scratchpad show; [instance="kpscratchpad"] move position center
 bindsym $mod+shift+p exec --no-startup-id keepassxc -name kpscratchpad
-
-for_window[class="Fsearch"] floating enable, sticky enable, resize set 800 700, move scratchpad
-bindsym $mod+s [class="Fsearch"] scratchpad show; [class="Fsearch"] move position center
-bindsym $mod+shift+s exec --no-startup-id fsearch
 
 # Volume
 bindsym $mod+F12 exec --no-startup-id pamixer -i 2 && pkill -RTMIN+1 i3blocks
