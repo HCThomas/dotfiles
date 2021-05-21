@@ -84,4 +84,4 @@ map i push A<a-b><a-b><a-f> # before extention
 map a push A<a-b> # after extention
 map B bulkrename
 map b $setbg $f
-map E $setsid -f mpv $f
+map E $setsid -f mpv $f -quiet
