@@ -1,0 +1,14 @@
+#!/bin/sh
+session=${2:-i3}
+
+case $session in
+    i3) exec i3;;
+    dwm) picom -f &
+	dunst &
+	xss-lock --transfer-sleep-lock i3lock -c "#282a36" --nofork &
+	setrgb &
+	setbg &
+	dwmblocks &
+	exec dwm ;;
+    *) exec $1;;
+esac
