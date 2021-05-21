@@ -84,9 +84,4 @@ map i push A<a-b><a-b><a-f> # before extention
 map a push A<a-b> # after extention
 map B bulkrename
 map b $setbg $f
-map E $mpv --shuffle $f
-map <c-e> $sxiv $f
-
-#map <c-e> down
-#map <c-y> up
-map V push :!nvim<space>
+map E $setsid -f mpv $f
