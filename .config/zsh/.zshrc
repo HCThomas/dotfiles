@@ -35,7 +35,9 @@ alias \
 	pm="pulsemixer" \
 	bt="bluetoothctl" \
 	yt="youtube-dl" \
-	nu="nmtui"
+	nu="nmtui" \
+	screenShot="maim -s ~/Pictures/$(date +%s).png"
+
 c() {
       if [ -n "$1" ]; then
         cd "$1" || return 1
