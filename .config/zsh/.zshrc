@@ -29,9 +29,12 @@ alias \
 	p="pacman" \
 	g="git" \
 	v="nvim" \
-	sdn="sudo shutdown -h now" \
+	sdn="shutdown now" \
 	upMirrors="sudo reflector --verbose --latest 50 --sort rate --save /etc/pacman.d/mirrorlist" \
-	gts="c /run/media/holden/HDD8T/Sync"
+	gts="c /run/media/holden/HDD8T/Sync" \
+	pm="pulsemixer" \
+	bt="bluetoothctl" \
+	yt="youtube-dl"
 c() {
       if [ -n "$1" ]; then
         cd "$1" || return 1
