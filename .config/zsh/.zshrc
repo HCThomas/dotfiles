@@ -34,7 +34,8 @@ alias \
 	gts="c /run/media/holden/HDD8T/Sync" \
 	pm="pulsemixer" \
 	bt="bluetoothctl" \
-	yt="youtube-dl"
+	yt="youtube-dl" \
+	nu="nmtui"
 c() {
       if [ -n "$1" ]; then
         cd "$1" || return 1
