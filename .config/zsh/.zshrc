@@ -34,7 +34,7 @@ alias \
 	gts="c /run/media/holden/HDD8T/Sync" \
 	pm="pulsemixer" \
 	bt="bluetoothctl" \
-	yt="youtube-dl" \
+	yt="youtube-dl -f mp4" \
 	nu="nmtui" \
 	screenShot="maim -s ~/Pictures/$(date +%s).png"
 
