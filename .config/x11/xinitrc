@@ -5,7 +5,6 @@ case $session in
     i3) exec i3;;
     dwm) picom -f &
 	dunst &
-	xss-lock --transfer-sleep-lock i3lock -c "#282a36" --nofork &
 	#xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources &
 	setrgb &
 	setbg &
